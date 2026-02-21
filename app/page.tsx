@@ -1,77 +1,74 @@
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-"use client"; //makes this a client component
+"use client";
 
 import Navigation from './000000/0-1-navigation/navigation';
-import Footer from './000000/0-2-footer/footer'; // Import Footer
-import CustomCursor from './000000/0-0-cursor/page'; // Cursor Import
-import Head from 'next/head'; // Import for adding elements to the <head>
+import Footer from './000000/0-2-footer/footer';
+import CustomCursor from './000000/0-0-cursor/page';
+import Head from 'next/head';
+
+// Import your section components
+import MainHome from './000001/home-main/main';
+import Business from './000001/home-business/business';
+import Individuals from './000001/home-individuals/individuals';
+import BuildYourOwn from './000001/home-buildyourown/buildyourown';
+import Quest from './000001/home-quest/quest';
+import Courses from './000001/home-courses/courses';
+import Info from './000001/home-info/info';
+import Contact from './000001/home-contact/contact';
+
 import './home.css';
 
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 export default function Home() {
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
   return (
     <div className="home-container">
-      
-      {/* Add the font link */}
+      {/* Fonts */}
       <Head>
-      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
-      {/* Import Cursor */}
+      {/* Cursor */}
       <CustomCursor />
-      
-      {/* Import Navigation */}
 
+      {/* Navbar */}
       <Navigation />
 
-      {/* Scroll Sections */}
-
-      <section id="mainhome" className="scroll-section">
-        <h1>Main Home Section</h1>
+      {/* Sections */}
+      <section id="mainhome">
+        <MainHome />
       </section>
 
-      <section id="business" className="scroll-section">
-        <h1>Business Section</h1>
+      <section id="business">
+        <Business />
       </section>
 
-      <section id="individual" className="scroll-section">
-        <h1>Individuals Section</h1>
+      <section id="individual">
+        <Individuals />
       </section>
 
-      <section id="buildyourown" className="scroll-section">
-        <h1>Build Your Own Section</h1>
+      <section id="buildyourown">
+        <BuildYourOwn />
       </section>
 
-      <section id="quest" className="scroll-section">
-        <h1>Quest Section</h1>
+      <section id="quest">
+        <Quest />
       </section>
 
-      <section id="courses" className="scroll-section">
-        <h1>Courses Section</h1>
+      <section id="courses">
+        <Courses />
       </section>
 
-      <section id="info" className="scroll-section">
-        <h1>Info Section</h1>
+      <section id="info">
+        <Info />
       </section>
 
-      <section id="contact" className="scroll-section">
-        <h1>Contact Section</h1>
+      <section id="contact">
+        <Contact />
       </section>
 
       {/* Footer */}
-
       <Footer />
-
-
     </div>
   );
 }

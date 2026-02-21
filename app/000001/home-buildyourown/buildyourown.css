@@ -1,0 +1,51 @@
+/* main.css */
+.buildyourown-section-container {
+  font-family: 'Nunito', sans-serif;
+  width: 97%;       /* takes full width of screen */
+  margin-left: 25px; /* small left padding for better appearance */
+  max-width: none;   /* remove max width limit */       /* no centering margin */
+  background-color: #f0e5ff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 30px;           /* slightly smaller padding */
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 700px;       /* ensures container isn't too short */
+  max-height: 800px;       /* prevents container from being too tall */
+  overflow-y: auto;        /* allows scrolling if content is bigger than max-height */
+}
+
+.buildyourown-section-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.buildyourown-section-container h1 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.buildyourown-section-container p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .buildyourown-section-container {
+    width: 97%;
+    margin-left: 15px;
+    min-height: 100px;
+    max-height: none;      /* let it grow naturally on small screens */
+  }
+
+  .buildyourown-section-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .buildyourown-section-container p {
+    font-size: 0.95rem;
+  }
+}

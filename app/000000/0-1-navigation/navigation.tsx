@@ -18,16 +18,25 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Scroll to a section smoothly
+  // Scroll to a section smoothly, offset by navbar height
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
+  const element = document.getElementById(id);
+  if (element) {
+    const navbar = document.querySelector('.mainheader') as HTMLElement | null;
+    let navbarHeight = 0;
+
+    if (navbar) {
+      navbarHeight = navbar.getBoundingClientRect().height;
     }
-  };
+
+    const extraOffset = 15; // scroll a little higher than just below the navbar
+    const elementTop = element.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({
+      top: elementTop - navbarHeight - extraOffset,
+      behavior: 'smooth',
+    });
+  }
+};
 
   return (
     <header className={`mainheader ${scrolled ? "shrink" : ""}`}>

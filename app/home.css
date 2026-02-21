@@ -7,37 +7,20 @@ html {
 .home-container {
   width: 100%;
   overflow-x: hidden;
-  padding-top: 120px; /* match your navbar height */
-}
-
-/* Scroll sections */
-.scroll-section {
-  min-height: 100vh;
-  padding: 120px 40px 60px 40px; /* top padding accounts for fixed navbar */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 600;
+  flex-direction: column;
+ 
+  gap: 30px; /* spacing between sections */
+  padding-top: 300px; /* space for navbar height */
 }
 
-/* Prevent section from hiding under fixed header */
-.scroll-section {
-  scroll-margin-top: 120px; /* adjust to match header height */
+section {
+  scroll-margin-top: 120px; /* offset for fixed navbar */
 }
 
-/* Alternate background colors for visual separation */
-.scroll-section:nth-child(even) {
-  background-color: #f5f5f5;
-}
-
-.scroll-section:nth-child(odd) {
-  background-color: #ffffff;
-}
-
-/* Optional: make headings cleaner */
-.scroll-section h1 {
-  font-family: 'Nunito', sans-serif;
-  letter-spacing: 1px;
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .home-container {
+    padding-top: 350px; /* smaller padding for mobile */
+  }
 }
