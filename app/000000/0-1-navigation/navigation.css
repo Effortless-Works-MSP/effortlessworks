@@ -1,13 +1,27 @@
 .mainheader {
-    background-color: #504081; 
-    display: flex;
-    box-shadow: 0 2px 5px #1c0e45;
-    padding: 20px 40px;
-    justify-content: space-between;
-    align-items: center; 
-    flex-wrap: wrap;
-    z-index: 1000;
-  }
+  background-color: #504081; 
+  backdrop-filter: blur(10px);
+  display: flex;
+  box-shadow: 0 2px 5px #1c0e45;
+  padding: 20px 40px;
+  justify-content: space-between;
+  align-items: center; 
+  flex-wrap: wrap;
+
+  /* 👇 Added for sticky nav */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* 👇 Shrink state */
+.mainheader.shrink {
+  padding: 10px 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
   
   .mainnav {
     display: flex;
@@ -101,15 +115,21 @@
   }
   
   .logo {
-    width: 150px;
-    height: auto;
-    margin-left: 45px;
+  width: 150px;
+  height: auto;
+  transition: width 0.3s ease;
   }
 
+  .mainheader.shrink .logo {
+  width: 110px;
+  }
   .logo2 {
-    width: 180px;
-    height: auto;
-    margin-left: 150px;
+  width: 180px;
+  transition: width 0.3s ease;
+  }
+
+  .mainheader.shrink .logo2 {
+  width: 130px;
   }
 
   /* Adjustments for smaller screens */

@@ -1,30 +1,91 @@
 "use client";
 
-import Link from 'next/link';
+import { useEffect, useState } from "react";
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
 import './navigation.css';
 
 const Navigation = () => {
-  const pathname = usePathname(); 
+  const [scrolled, setScrolled] = useState(false);
+
+  // Detect scroll for shrinking navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50); // Shrinks navbar after 50px
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Scroll to a section smoothly
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  };
 
   return (
-    <header className="mainheader">
-      <Link href="https://www.elifcakmak.blog/" className="logo-link">
-        <Image src="/elif-logo/elifcakmaklogo.svg" alt="Elif Çakmak Logo" width={100} height={100} className="logo" />
-      </Link>
-      <Link href="/"className="logo-link"onClick={(e) => {e.preventDefault();window.location.href = "/";}}>
-        <Image src="/elif-logo/effortlessworks.svg" alt="Elif Çakmak Logo" width={100} height={100} className="logo2"/>
-      </Link>
+    <header className={`mainheader ${scrolled ? "shrink" : ""}`}>
+      {/* Blog logo */}
+      <a href="https://www.elifcakmak.blog/" className="logo-link">
+        <Image
+          src="/elif-logo/elifcakmaklogo.svg"
+          alt="Elif Çakmak Logo"
+          width={100}
+          height={100}
+          className="logo"
+        />
+      </a>
+
+      {/* Main logo that scrolls home */}
+      <button onClick={() => scrollToSection("mainhome")} className="logo-link">
+        <Image
+          src="/elif-logo/effortlessworks.svg"
+          alt="Effortless Works"
+          width={100}
+          height={100}
+          className="logo2"
+        />
+      </button>
+
+      {/* Navigation buttons */}
       <nav className="mainnav">
-      <Link href="/" className={`newsletter-button ${pathname === '/' ? 'active' : ''}`}onClick={(e) => { e.preventDefault();window.location.href = "/";}}>Main Home</Link>
-        <Link href="/000002/business" className={`mainnav-link ${pathname === '/000002/business' ? 'active' : ''}`}>Business 🏢</Link>
-        <Link href="/000002/individual" className={`mainnav-link ${pathname === '/000002/individual' ? 'active' : ''}`}>Individuals 🏠</Link>
-        <Link href="/000002/buildyourown" className={`mainnav-link ${pathname === '/000002/buildyourown' ? 'active' : ''}`}>Build Your Own ➡️</Link>
-        <Link href="/000002/quest" className={`mainnav-link ${pathname === '/000002/quest' ? 'active' : ''}`}>Quest ⚔️</Link>
-        <Link href="/000002/courses" className={`mainnav-link ${pathname === '/000002/courses' ? 'active' : ''}`}>Courses 📚</Link>
-        <Link href="/000002/info" className={`mainnav-link ${pathname === '/000002/info' ? 'active' : ''}`}>Info ℹ️</Link>
-        <Link href="/000002/contact" className={`newsletter-button ${pathname === '/000002/contact' ? 'active' : ''}`}>Contact</Link>
+        <button onClick={() => scrollToSection("mainhome")} className="newsletter-button">
+          Main Home
+        </button>
+
+        <button onClick={() => scrollToSection("business")} className="mainnav-link">
+          Business 🏢
+        </button>
+
+        <button onClick={() => scrollToSection("individual")} className="mainnav-link">
+          Individuals 🏠
+        </button>
+
+        <button onClick={() => scrollToSection("buildyourown")} className="mainnav-link">
+          Build Your Own ➡️
+        </button>
+
+        <button onClick={() => scrollToSection("quest")} className="mainnav-link">
+          Quest ⚔️
+        </button>
+
+        <button onClick={() => scrollToSection("courses")} className="mainnav-link">
+          Courses 📚
+        </button>
+
+        <button onClick={() => scrollToSection("info")} className="mainnav-link">
+          Info ℹ️
+        </button>
+
+        <button onClick={() => scrollToSection("contact")} className="newsletter-button">
+          Contact
+        </button>
       </nav>
     </header>
   );
