@@ -36,8 +36,8 @@
 @media (max-width: 768px) {
   .business-section-container {
     width: 97%;
-    margin-left: 15px;
-    min-height: 100px;
+    margin-left: 10px;
+    min-height: 500px;
     max-height: none;      /* let it grow naturally on small screens */
   }
 
