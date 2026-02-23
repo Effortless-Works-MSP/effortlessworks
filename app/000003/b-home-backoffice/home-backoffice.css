@@ -1,5 +1,5 @@
 /* main.css */
-.courses-section-container {
+.backoffice-section-container {
   font-family: 'Nunito', sans-serif;
   width: 97%;       /* takes full width of screen */
   margin-left: 25px; /* small left padding for better appearance */
@@ -13,25 +13,28 @@
   min-height: 700px;       /* ensures container isn't too short */
   max-height: 800px;       /* prevents container from being too tall */
   overflow-y: auto;        /* allows scrolling if content is bigger than max-height */
+  margin-bottom: 30px;     /* space below the section */
+  margin-top: 30px;        /* space above the section */
 }
 
-.courses-section-container:hover {
+.backoffice-section-container:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 
-.courses-section-container h1 {
+.backoffice-section-container h1 {
   margin-top: 0;
   font-size: 1.8rem;
   margin-bottom: 15px;
 }
 
-.courses-section-container p {
+.backoffice-section-container p {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 0;
 }
 
+/* Button styling */
 .link-button {
   padding: 12px 24px;
   background-color: #4f46e5;
@@ -51,18 +54,18 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .courses-section-container {
+  .backoffice-section-container {
     width: 97%;
     margin-left: 10px;
     min-height: 500px;
     max-height: none;      /* let it grow naturally on small screens */
   }
 
-  .courses-section-container h1 {
+  .backoffice-section-container h1 {
     font-size: 1.5rem;
   }
 
-  .courses-section-container p {
+  .backoffice-section-container p {
     font-size: 0.95rem;
   }
 

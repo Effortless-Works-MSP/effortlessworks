@@ -1,30 +1,76 @@
 "use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { usePathname } from 'next/navigation';
-import './navigation.css';
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import "./navigation.css";
 
 const Navigation = () => {
-  const pathname = usePathname(); 
+  const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
 
+  // Shrink header on scroll
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="header">
-      <Link href="/"className="logo-link"onClick={(e) => {e.preventDefault();window.location.href = "/";}}>
-        <Image src="/elif-logo/effortlessworksdark.svg" alt="Elif Çakmak Logo" width={100} height={100} />
+    <>
+    <header className={`mainheader ${scrolled ? "shrink" : ""}`}>
+      {/* Blog logo */}
+      <a href="https://www.elifcakmak.blog/" className="logo-link">
+        <Image
+          src="/elif-logo/elifcakmaklogo.svg"
+          alt="Elif Çakmak Logo"
+          width={100}
+          height={100}
+          className="logo"
+        />
+      </a>
+
+      {/* Main Home logo */}
+      <Link href="/" className="logo-link">
+        <Image
+          src="/elif-logo/effortlessworksdark.svg"
+          alt="Effortless Works"
+          width={100}
+          height={100}
+          className="logo2"
+        />
       </Link>
-      <Link href="/000002/business" className="logo-link">
-        <Image src="/nav-titles/biz-nav.svg" alt="Elif Çakmak Logo" width={300} height={300}  />
-      </Link>
-      <nav className="nav">
-        <Link href="/" className={`Home-button ${pathname === '/' ? 'active' : ''}`}onClick={(e) => { e.preventDefault();window.location.href = "/";}}>Main Home</Link>
-        <Link href="/000002/business" className={`nav-link ${pathname === '/000002/business' ? 'active' : ''}`}>Business 🏢</Link>
-        <Link href="/000003/backoffice" className={`newsletter-button ${pathname === '/000003/backoffice' ? 'active' : ''}`}>Back Office</Link>
-        <Link href="/000003/projectmanagement" className={`newsletter-button ${pathname === '/000003/projectmanagement' ? 'active' : ''}`}>Project Management</Link>
-        <Link href="/000003/b-howtos" className={`newsletter-button ${pathname === '/000003/b-howtos' ? 'active' : ''}`}>How Tos</Link>
+
+      {/* Navigation */}
+      <nav className="mainnav">
+        {/* Goes to whole site home */}
+        <Link href="/" className="Home-button">
+          Main Home
+        </Link>
+
+        {/* Goes to business home page */}
+        <Link href="/000002/business" className="mainnav-link">
+          Business 🏢
+        </Link>
+
+        {/* Scroll buttons (use query params to navigate + scroll) */}
+        <Link href="/000002/business?scroll=backoffice" className="newsletter-button">
+          Back Office
+        </Link>
+
+        <Link href="/000002/business?scroll=projectmanagement" className="newsletter-button">
+          Project Management
+        </Link>
+
+        <Link href="/000002/business?scroll=howtos" className="newsletter-button">
+          How Tos
+        </Link>
       </nav>
     </header>
+    {/* Spacer div pushes content below fixed header */}
+      <div style={{ height: '210px' }} />
+    </>
   );
 };
 
