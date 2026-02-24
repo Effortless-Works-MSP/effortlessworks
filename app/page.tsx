@@ -15,8 +15,6 @@ import Courses from './000001/home-courses/courses';
 import Info from './000001/home-info/info';
 import Contact from './000001/home-contact/contact';
 
-import './home.css';
-
 export default function Home() {
   return (
     <div className="home-container">

@@ -13,6 +13,8 @@
   min-height: 700px;       /* ensures container isn't too short */
   max-height: 800px;       /* prevents container from being too tall */
   overflow-y: auto;        /* allows scrolling if content is bigger than max-height */
+  margin-bottom: 30px;     /* space below the section */
+  margin-top: 30px; 
 }
 
 .main-section-container:hover {
