@@ -1,8 +1,15 @@
-.mainheader {
+#backoffice,
+#projectmanagement,
+#howtos {
+  scroll-margin-top: 80px; /* navbar height + extra space */
+}
+
+
+.business-mainheader {
   background-color: #1c0e45; 
   display: flex;
   box-shadow: 0 2px 5px #4bfe5a;
-  padding: 20px 40px;
+  padding: 60px 40px;
   justify-content: space-between;
   align-items: center; 
   flex-wrap: wrap;
@@ -14,19 +21,19 @@
   transition: all 0.3s ease;
 }
 
-.mainheader.shrink {
+.business-mainheader.shrink {
   padding: 10px 40px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.mainnav {
+.business-mainnav {
   display: flex;
   gap: 16px;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.mainnav-link {
+.business-mainnav-link {
   text-decoration: none;
   color: #efe1ff;
   font-weight: 500;
@@ -35,12 +42,12 @@
   font-size: 14px;
 }
 
-.mainnav-link:hover {
+.business-mainnav-link:hover {
   color: #fef74b;
   transform: scale(1.12);
 }
 
-.Home-button {
+.business-Home-button {
   padding: 3px 10px;
   background-color: #f3ef98;
   color: #504081;
@@ -50,12 +57,12 @@
   transition: background-color 0.3s;
 }
 
-.Home-button:hover {
+.business-Home-button:hover {
   background-color: #504081;
   color: #4bfe5a;
 }
 
-.newsletter-button {
+.business-newsletter-button {
   padding: 3px 10px;
   background-color: #504081;
   color: #4bfe5a;
@@ -65,61 +72,61 @@
   transition: background-color 0.3s;
 }
 
-.newsletter-button:hover {
+.business-newsletter-button:hover {
   background-color: #f3ef98;
   color: #504081;
 }
 
-.logo-link {
+.business-logo-link {
   display: inline-block;
   margin: 10px;
   cursor: pointer;
   transition: transform 0.3s, filter 0.3s;
 }
 
-.logo-link:hover {
+.business-logo-link:hover {
   transform: scale(1.1); 
   filter: brightness(1.2);
 }
 
-.logo {
+.business-logo {
   width: 150px;
   height: auto;
   margin-left: 45px;
   transition: width 0.3s ease;
 }
 
-.mainheader.shrink .logo {
+.business-mainheader.shrink .business-logo {
   width: 110px;
 }
 
-.logo2 {
+.business-logo2 {
   width: 100px;
   height: auto;
   margin-left: 150px;
   transition: width 0.3s ease;
 }
 
-.mainheader.shrink .logo2 {
+.business-mainheader.shrink .business-logo2 {
   width: 130px;
 }
 
 @media (max-width: 768px) {
-  .mainheader {
+  .business-mainheader {
     flex-direction: column;
     align-items: center;
   }
 
-  .mainnav {
+  .business-mainnav {
     justify-content: center;
   }
 
-  .logo {
+  .business-logo {
     width: 120px;
     margin-left: 0px;
   }
 
-  .logo2 {
+  .business-logo2 {
     width: 140px; 
     margin-left: 15px;
   }

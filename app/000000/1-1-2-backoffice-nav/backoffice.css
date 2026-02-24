@@ -1,0 +1,126 @@
+.backoffice-header {
+  background-color: #1c0e45; 
+  display: flex;
+  box-shadow: 0 2px 5px #4bfe5a;
+  padding: 60px 40px;
+  justify-content: space-between;
+  align-items: center; 
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.backoffice-header.shrink {
+  padding: 10px 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.backoffice-nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.backoffice-nav-link {
+  text-decoration: none;
+  color: #efe1ff;
+  font-weight: 500;
+  transition: color 0.3s;
+  position: relative;
+  font-size: 14px;
+}
+
+.backoffice-nav-link:hover {
+  color: #fef74b;
+  transform: scale(1.12);
+}
+
+.backoffice-Home-button {
+  padding: 3px 10px;
+  background-color: #f3ef98;
+  color: #504081;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.backoffice-Home-button:hover {
+  background-color: #504081;
+  color: #4bfe5a;
+}
+
+.backoffice-newsletter-button {
+  padding: 3px 10px;
+  background-color: #504081;
+  color: #4bfe5a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.backoffice-newsletter-button:hover {
+  background-color: #f3ef98;
+  color: #504081;
+}
+
+.backoffice-logo-link {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.backoffice-logo-link:hover {
+  transform: scale(1.1); 
+  filter: brightness(1.2);
+}
+
+.backoffice-logo {
+  width: 150px;
+  height: auto;
+  margin-left: 45px;
+  transition: width 0.3s ease;
+}
+
+.backoffice-header.shrink .backoffice-logo {
+  width: 110px;
+}
+
+.backoffice-logo2 {
+  width: 100px;
+  height: auto;
+  margin-left: 150px;
+  transition: width 0.3s ease;
+}
+
+.backoffice-header.shrink .backoffice-logo2 {
+  width: 130px;
+}
+
+@media (max-width: 768px) {
+  .backoffice-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .backoffice-nav {
+    justify-content: center;
+  }
+
+  .backoffice-logo {
+    width: 120px;
+    margin-left: 0px;
+  }
+
+  .backoffice-logo2 {
+    width: 140px; 
+    margin-left: 15px;
+  }
+}
