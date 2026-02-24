@@ -1,0 +1,154 @@
+/* =============================
+   Backoffice-Notion Navigation CSS
+   Matches working nav style
+============================= */
+
+.backoffice-notion-mainheader {
+  background-color: #1c0e45; 
+  display: flex;
+  box-shadow: 0 2px 5px #4bfe5a;
+  padding: 20px 40px; /* same as working nav */
+  justify-content: space-between;
+  align-items: center; 
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.backoffice-notion-mainheader.shrink {
+  padding: 10px 40px; /* shrink effect */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* =============================
+   Logo Styles
+============================= */
+
+.backoffice-notion-logo-link {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.backoffice-notion-logo-link:hover {
+  transform: scale(1.1); 
+  filter: brightness(1.2);
+}
+
+.backoffice-notion-logo {
+  width: 200px;
+  height: auto;
+  margin-left: 45px;
+  transition: width 0.3s ease;
+}
+
+.backoffice-notion-mainheader.shrink .backoffice-notion-logo {
+  width: 110px; /* shrink smaller logo when scrolling */
+}
+
+.backoffice-notion-logo2 {
+  width: 250px; /* match working nav logo size */
+  height: auto;
+  margin-left: 150px;
+  transition: width 0.3s ease;
+}
+
+.backoffice-notion-mainheader.shrink .backoffice-notion-logo2 {
+  width: 150px; /* slightly smaller on scroll */
+}
+
+/* =============================
+   Navigation Links
+============================= */
+
+.backoffice-notion-mainnav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.nav-right {
+  margin-left: auto; /* push right group to the right */
+}
+
+/* Left links */
+.backoffice-notion-mainnav-link {
+  text-decoration: none;
+  color: #efe1ff;
+  font-weight: 500;
+  font-size: 14px;
+  position: relative;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.backoffice-notion-mainnav-link:hover {
+  color: #fef74b;
+  transform: scale(1.12);
+}
+
+/* Right buttons */
+.backoffice-notion-Home-button,
+.backoffice-notion-newsletter-button {
+  padding: 3px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.backoffice-notion-Home-button {
+  background-color: #f3ef98;
+  color: #504081;
+}
+
+.backoffice-notion-Home-button:hover {
+  background-color: #504081;
+  color: #4bfe5a;
+}
+
+.backoffice-notion-newsletter-button {
+  background-color: #504081;
+  color: #4bfe5a;
+}
+
+.backoffice-notion-newsletter-button:hover {
+  background-color: #f3ef98;
+  color: #504081;
+}
+
+/* =============================
+   Responsive adjustments
+============================= */
+
+@media (max-width: 768px) {
+  .backoffice-notion-mainheader {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .backoffice-notion-mainnav {
+    justify-content: center;
+  }
+
+  .backoffice-notion-logo {
+    width: 120px;
+    margin-left: 0;
+  }
+
+  .backoffice-notion-logo2 {
+    width: 140px;
+    margin-left: 15px;
+  }
+}

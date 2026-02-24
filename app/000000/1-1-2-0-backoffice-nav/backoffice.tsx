@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import "./biz-nav.css";
+import "./backoffice.css";
 
 const Navigation: React.FC = () => {
   const [scrolled, setScrolled] = useState(false); // shrink state
@@ -53,65 +53,62 @@ const Navigation: React.FC = () => {
     <>
       <header
         ref={headerRef}
-        className={`business-mainheader ${scrolled ? "shrink" : ""}`}
+        className={`backoffice-mainheader ${scrolled ? "shrink" : ""}`}
       >
         {/* Blog logo */}
-        <a href="https://www.elifcakmak.blog/" className="business-logo-link">
+        <a href="https://www.elifcakmak.blog/" className="backoffice-logo-link">
           <Image
-            src="/elif-logo/elifcakmaklogo.svg"
+            src="/elif-logo/effortlessworksdark.svg"
             alt="Elif Çakmak Logo"
             width={100}
             height={100}
-            className="business-logo"
+            className="backoffice-logo"
           />
         </a>
 
         {/* Main Home logo */}
-        <Link href="/" className="business-logo-link">
+        <Link href="/" className="backoffice-logo-link">
           <Image
-            src="/elif-logo/effortlessworksdark.svg"
+            src="/nav-titles/biz-nav.svg"
             alt="Effortless Works"
-            width={100}
-            height={100}
-            className="business-logo2"
+            width={300}
+            height={300}
+            className="backoffice-logo2"
           />
         </Link>
 
         {/* Nav buttons visible only if showNav is true */}
         {showNav && (
-          <nav className="business-mainnav">
-            {/* Left group */}
+          <nav className="backoffice-mainnav">
+            {/* LEFT GROUP */}
             <div className="nav-left">
-              <Link href="/" className="business-Home-button">
+              <Link href="/" className="backoffice-Home-button">
                 Main Home
               </Link>
 
-              <Link href="/000002/business" className="business-mainnav-link">
+              <Link href="/000002/business" className="backoffice-mainnav-link">
                 Business 🏢
+              </Link>
+
+              <Link href="/000003/backoffice" className="backoffice-mainnav-link">
+                Back Office 📂
               </Link>
             </div>
 
-            {/* Right group */}
+            {/* RIGHT GROUP */}
             <div className="nav-right">
               <button
-                onClick={() => scrollToSection("backoffice")}
-                className="business-newsletter-button"
+                onClick={() => scrollToSection("SheetsBackOfficeSection")}
+                className="backoffice-newsletter-button"
               >
-                Back Office
+                Sheets
               </button>
 
               <button
-                onClick={() => scrollToSection("projectmanagement")}
-                className="business-newsletter-button"
+                onClick={() => scrollToSection("NotionBackOfficeSection")}
+                className="backoffice-newsletter-button"
               >
-                Project Management
-              </button>
-
-              <button
-                onClick={() => scrollToSection("howtos")}
-                className="business-newsletter-button"
-              >
-                How Tos
+                Notion
               </button>
             </div>
           </nav>
@@ -119,7 +116,7 @@ const Navigation: React.FC = () => {
       </header>
 
       {/* Spacer to prevent content jump */}
-      <div style={{ height: '320px' }} />
+      <div style={{ height: '310px' }} />
     </>
   );
 };

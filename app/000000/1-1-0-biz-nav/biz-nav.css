@@ -1,9 +1,8 @@
 #backoffice,
 #projectmanagement,
 #howtos {
-  scroll-margin-top: 80px; /* navbar height + extra space */
+  scroll-margin-top: 80px;
 }
-
 
 .business-mainheader {
   background-color: #1c0e45; 
@@ -28,24 +27,49 @@
 
 .business-mainnav {
   display: flex;
-  gap: 16px;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
 }
+
+.nav-left {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-left: auto; /* pushes this group to the right */
+}
+
+/* ===== NAV LINKS ===== */
 
 .business-mainnav-link {
   text-decoration: none;
   color: #efe1ff;
   font-weight: 500;
-  transition: color 0.3s;
-  position: relative;
   font-size: 14px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
+/* Hover */
 .business-mainnav-link:hover {
   color: #fef74b;
   transform: scale(1.12);
 }
+
+/* ✅ ACTIVE = YELLOW TEXT */
+.business-mainnav-link.active {
+  color: #fef74b;
+  font-weight: 700;
+}
+
+
+/* ===== HOME BUTTON ===== */
 
 .business-Home-button {
   padding: 3px 10px;
@@ -54,13 +78,23 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .business-Home-button:hover {
   background-color: #504081;
   color: #4bfe5a;
 }
+
+/* ✅ ACTIVE HOME */
+.business-Home-button.active {
+  background-color: #504081;
+  color: #fef74b;
+  font-weight: 700;
+}
+
+
+/* ===== SECTION BUTTONS ===== */
 
 .business-newsletter-button {
   padding: 3px 10px;
@@ -69,13 +103,23 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .business-newsletter-button:hover {
   background-color: #f3ef98;
   color: #504081;
 }
+
+/* ✅ ACTIVE SECTION BUTTON */
+.business-newsletter-button.active {
+  background-color: #504081;
+  color: #fef74b;
+  font-weight: 700;
+}
+
+
+/* ===== LOGOS ===== */
 
 .business-logo-link {
   display: inline-block;
@@ -90,7 +134,7 @@
 }
 
 .business-logo {
-  width: 150px;
+  width: 200px;
   height: auto;
   margin-left: 45px;
   transition: width 0.3s ease;
@@ -101,7 +145,7 @@
 }
 
 .business-logo2 {
-  width: 100px;
+  width: 150px;
   height: auto;
   margin-left: 150px;
   transition: width 0.3s ease;
@@ -110,6 +154,9 @@
 .business-mainheader.shrink .business-logo2 {
   width: 130px;
 }
+
+
+/* ===== MOBILE ===== */
 
 @media (max-width: 768px) {
   .business-mainheader {

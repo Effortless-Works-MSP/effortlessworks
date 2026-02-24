@@ -1,0 +1,154 @@
+/* =============================
+   Backoffice-Sheets Navigation CSS
+   Matches working nav style
+============================= */
+
+.backoffice-sheets-mainheader {
+  background-color: #1c0e45; 
+  display: flex;
+  box-shadow: 0 2px 5px #4bfe5a;
+  padding: 20px 40px; /* same as working nav */
+  justify-content: space-between;
+  align-items: center; 
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.backoffice-sheets-mainheader.shrink {
+  padding: 10px 40px; /* shrink effect */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* =============================
+   Logo Styles
+============================= */
+
+.backoffice-sheets-logo-link {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.backoffice-sheets-logo-link:hover {
+  transform: scale(1.1); 
+  filter: brightness(1.2);
+}
+
+.backoffice-sheets-logo {
+  width: 200px;
+  height: auto;
+  margin-left: 45px;
+  transition: width 0.3s ease;
+}
+
+.backoffice-sheets-mainheader.shrink .backoffice-sheets-logo {
+  width: 110px; /* shrink smaller logo when scrolling */
+}
+
+.backoffice-sheets-logo2 {
+  width: 250px; /* match working nav logo size */
+  height: auto;
+  margin-left: 150px;
+  transition: width 0.3s ease;
+}
+
+.backoffice-sheets-mainheader.shrink .backoffice-sheets-logo2 {
+  width: 150px; /* slightly smaller on scroll */
+}
+
+/* =============================
+   Navigation Links
+============================= */
+
+.backoffice-sheets-mainnav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.nav-right {
+  margin-left: auto; /* push right group to the right */
+}
+
+/* Left links */
+.backoffice-sheets-mainnav-link {
+  text-decoration: none;
+  color: #efe1ff;
+  font-weight: 500;
+  font-size: 14px;
+  position: relative;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.backoffice-sheets-mainnav-link:hover {
+  color: #fef74b;
+  transform: scale(1.12);
+}
+
+/* Right buttons */
+.backoffice-sheets-Home-button,
+.backoffice-sheets-newsletter-button {
+  padding: 3px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.backoffice-sheets-Home-button {
+  background-color: #f3ef98;
+  color: #504081;
+}
+
+.backoffice-sheets-Home-button:hover {
+  background-color: #504081;
+  color: #4bfe5a;
+}
+
+.backoffice-sheets-newsletter-button {
+  background-color: #504081;
+  color: #4bfe5a;
+}
+
+.backoffice-sheets-newsletter-button:hover {
+  background-color: #f3ef98;
+  color: #504081;
+}
+
+/* =============================
+   Responsive adjustments
+============================= */
+
+@media (max-width: 768px) {
+  .backoffice-sheets-mainheader {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .backoffice-sheets-mainnav {
+    justify-content: center;
+  }
+
+  .backoffice-sheets-logo {
+    width: 120px;
+    margin-left: 0;
+  }
+
+  .backoffice-sheets-logo2 {
+    width: 140px;
+    margin-left: 15px;
+  }
+}

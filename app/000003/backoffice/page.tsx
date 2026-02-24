@@ -1,25 +1,25 @@
-"use client"; // Add this directive to make this a client component
+"use client";
+import CustomCursor from "../../000000/0-0-cursor/page";
+import Navigation from "../../000000/1-1-2-0-backoffice-nav/backoffice";
+import Footer from "../../000000/0-2-footer/footer";
+import SheetsBackoffice from "../../000003/bb-backoffice-sheets/bb-home-section";
+import NotionBackOffice from "../../000003/bb-backoffice-notion/bb-home-section";
 
-import CustomCursor from '../../000000/0-0-cursor/page';
-import Navigation from '../../000000/1-1-2-backoffice-nav/backoffice';
-import Footer from '../../000000/0-2-footer/footer'
-import UnderConstruction from '../../000000/0-4-UnderConstruction/UnderConstruction'; // Import the new component
-
-export default function Home() {
-  
+export default function BackOfficeHome() {
 
   return (
     <div className="home-container">
-      {/* Import Cursor */}
       <CustomCursor />
-
-      {/* Navigation */}
       <Navigation />
 
-      {/* UnderConstruction */}
-      <UnderConstruction />
+      <div id="SheetsBackOfficeSection">
+        <SheetsBackoffice />
+      </div>
 
-      {/* Footer */}
+      <div id="NotionBackOfficeSection">
+        <NotionBackOffice />
+      </div>
+
       <Footer />
     </div>
   );

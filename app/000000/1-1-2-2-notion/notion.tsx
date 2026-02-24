@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import "./biz-nav.css";
+import "./notion.css";
 
 const Navigation: React.FC = () => {
   const [scrolled, setScrolled] = useState(false); // shrink state
@@ -53,73 +53,67 @@ const Navigation: React.FC = () => {
     <>
       <header
         ref={headerRef}
-        className={`business-mainheader ${scrolled ? "shrink" : ""}`}
+        className={`backoffice-notion-mainheader ${scrolled ? "shrink" : ""}`}
       >
         {/* Blog logo */}
-        <a href="https://www.elifcakmak.blog/" className="business-logo-link">
+        <a href="https://www.elifcakmak.blog/" className="backoffice-notion-logo-link">
           <Image
-            src="/elif-logo/elifcakmaklogo.svg"
+            src="/elif-logo/effortlessworksdark.svg"
             alt="Elif Çakmak Logo"
             width={100}
             height={100}
-            className="business-logo"
+            className="backoffice-notion-logo"
           />
         </a>
 
         {/* Main Home logo */}
-        <Link href="/" className="business-logo-link">
+        <Link href="/" className="backoffice-notion-logo-link">
           <Image
-            src="/elif-logo/effortlessworksdark.svg"
+            src="/nav-titles/biz-nav.svg"
             alt="Effortless Works"
             width={100}
             height={100}
-            className="business-logo2"
+            className="backoffice-notion-logo2"
           />
         </Link>
 
         {/* Nav buttons visible only if showNav is true */}
         {showNav && (
-          <nav className="business-mainnav">
-            {/* Left group */}
+          <nav className="backoffice-notion-mainnav">
+            {/* LEFT GROUP */}
             <div className="nav-left">
-              <Link href="/" className="business-Home-button">
+              <Link href="/" className="backoffice-notion-Home-button">
                 Main Home
               </Link>
 
-              <Link href="/000002/business" className="business-mainnav-link">
+              <Link href="/000002/business" className="backoffice-notion-mainnav-link">
                 Business 🏢
+              </Link>
+
+              <Link href="/000003/backoffice" className="backoffice-notion-mainnav-link">
+                Back Office 📂
+              </Link>
+
+              <Link href="/000009/bo-notion" className="backoffice-notion-mainnav-link">
+                Backoffice Notion 📄
               </Link>
             </div>
 
-            {/* Right group */}
+            {/* RIGHT GROUP */}
             <div className="nav-right">
-              <button
-                onClick={() => scrollToSection("backoffice")}
-                className="business-newsletter-button"
+              <Link
+                href="/000009/bo-sheets"
+                className="backoffice-notion-newsletter-button"
               >
-                Back Office
-              </button>
-
-              <button
-                onClick={() => scrollToSection("projectmanagement")}
-                className="business-newsletter-button"
-              >
-                Project Management
-              </button>
-
-              <button
-                onClick={() => scrollToSection("howtos")}
-                className="business-newsletter-button"
-              >
-                How Tos
-              </button>
+                Sheets
+              </Link>
             </div>
           </nav>
         )}
       </header>
 
       {/* Spacer to prevent content jump */}
-      <div style={{ height: '320px' }} />
+      <div style={{ height: '310px' }} />
     </>
   );
 };
