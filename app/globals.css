@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ✅ Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ✅ Offset for sections to account for fixed header */
+#backoffice,
+#projectmanagement,
+#howtos {
+  scroll-margin-top: 220px; /* adjust to your header height */
+}
+
 :root {
   --background: #504081; /* Light background */
   --foreground: #333; /* Dark text */
@@ -14,18 +26,16 @@
   }
 }
 
-
-
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Nunito', sans-serif; /* Set 'Nunito' as the primary font */
-  cursor: none; /* Hide the default cursor */
+  font-family: 'Nunito', sans-serif;
+  cursor: none;
 }
 
 /* Override the cursor style for all links */
 a {
-  cursor: none !important; /* Prevent default cursor when hovering over links */
+  cursor: none !important;
 }
 
 .main-content {
@@ -45,21 +55,21 @@ a {
 
 /* Styling for the specific text */
 .text-hover-grow {
-  display: inline-block; /* Required for transform to work */
-  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
 }
 
 .text-hover-grow:hover {
-  transform: scale(1.1); /* Scales the text to 110% */
+  transform: scale(1.1);
 }
 
 /* Reusable hover color change effect */
 .text-hover-yellow {
-  transition: color 0.3s ease-in-out; /* Smooth transition */
+  transition: color 0.3s ease-in-out;
 }
 
 .text-hover-yellow:hover {
-  color: #fef74b; /* Yellow color */
+  color: #fef74b;
 }
 
 .btn-primary {
@@ -70,8 +80,8 @@ a {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  border: 2px solid #ccc61f; /* Dark purple border */
-  margin-right: 10px; /* Add space to the right */
+  border: 2px solid #ccc61f;
+  margin-right: 10px;
 }
 
 .btn-primary:hover {
@@ -94,6 +104,3 @@ a {
   background-color: #fef74b;
   color: #333;
 }
-
-
-
