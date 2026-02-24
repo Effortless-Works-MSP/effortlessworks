@@ -5,6 +5,14 @@ import Link from "next/link";
 import Image from "next/image";
 import "./backoffice.css";
 
+const navItems = [
+  { href: "/", label: "Main Home", className: "backoffice-home-button" },
+  { href: "/000002/business", label: "Business 🏢", className: "backoffice-nav-link" },
+  { href: "/000003/backoffice#backoffice", label: "Back Office 📂", className: "backoffice-newsletter-button" },
+  { href: "/000009/bo-sheets#sheets", label: "Sheets", className: "backoffice-newsletter-button" },
+  { href: "/000009/bo-notion#notion", label: "Notion", className: "backoffice-newsletter-button" },
+];
+
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -19,14 +27,7 @@ const Navigation = () => {
     <>
       <header className={`backoffice-header ${scrolled ? "shrink" : ""}`}>
         {/* Main Logo */}
-        <a
-          href="/"
-          className="backoffice-logo-link"
-          onClick={(e) => {
-            e.preventDefault();
-            window.location.href = "/";
-          }}
-        >
+        <Link href="/" className="backoffice-logo-link">
           <Image
             src="/elif-logo/effortlessworksdark.svg"
             alt="Elif Çakmak Logo"
@@ -34,7 +35,7 @@ const Navigation = () => {
             height={100}
             className="backoffice-logo"
           />
-        </a>
+        </Link>
 
         {/* Backoffice Title Logo */}
         <Link href="/000002/business" className="backoffice-logo-link">
@@ -49,26 +50,11 @@ const Navigation = () => {
 
         {/* Navigation */}
         <nav className="backoffice-nav">
-          <Link href="/" className="backoffice-Home-button">
-            Main Home
-          </Link>
-
-          <Link href="/000002/business" className="backoffice-nav-link">
-            Business 🏢
-          </Link>
-
-          {/* Anchor links */}
-          <Link href="/000003/backoffice#backoffice" className="backoffice-newsletter-button">
-            Back Office 📂
-          </Link>
-
-          <Link href="/000009/bo-sheets#sheets" className="backoffice-newsletter-button">
-            Sheets
-          </Link>
-
-          <Link href="/000009/bo-notion#notion" className="backoffice-newsletter-button">
-            Notion
-          </Link>
+          {navItems.map(({ href, label, className }) => (
+            <Link key={href} href={href} className={className}>
+              {label}
+            </Link>
+          ))}
         </nav>
       </header>
 
