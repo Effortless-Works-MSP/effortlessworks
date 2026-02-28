@@ -5,7 +5,7 @@ import Navigation from '../../000000/1-2-1-lifetracker-nav/navigation';
 import Footer from '../../000000/0-2-footer/footer'
 import UnderConstruction from '../../000000/0-4-UnderConstruction/UnderConstruction'; // Import the new component
 
-export default function Home() {
+export default function LifeTrackerHome() {
 
   return (
     <div className="home-container">

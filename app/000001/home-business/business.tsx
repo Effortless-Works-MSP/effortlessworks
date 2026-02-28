@@ -12,7 +12,7 @@ const Business: React.FC = () => {
     {/* Button linking to another page */}
       <Link href="/000002/business"> {/* Replace '/target-page' with your page path */}
         <button className="link-button">
-          Go to Business Page
+          Goes to Business Page
         </button>
       </Link>
     </div>

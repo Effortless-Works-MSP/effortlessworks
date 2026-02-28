@@ -6,7 +6,7 @@ import ProductCourses from "../../000003/bb-howto-productcourses/home-productcou
 import SelfPacedCourses from "../../000003/bb-howto-selfpacedcourses/home-selfpaced";
 import InstructorledCourses from "../../000003/bb-howto-instructorledcourses/home-instructorled";
 
-export default function BusinessHome() {
+export default function BusinessHowTosHome() {
 
   return (
     <div className="home-container">

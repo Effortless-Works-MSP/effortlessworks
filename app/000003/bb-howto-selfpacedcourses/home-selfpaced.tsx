@@ -3,7 +3,7 @@ import './home-selfpaced.css';
 import React from 'react';
 import Link from 'next/link'; 
 
-const BackOfficeSection: React.FC = () => {
+const SelfPacedSection: React.FC = () => {
   return (
     <div className="selfpaced-section-container">
       <h1>Self Paced Courses Section</h1>
@@ -19,4 +19,4 @@ const BackOfficeSection: React.FC = () => {
   );
 };
 
-export default BackOfficeSection;
+export default SelfPacedSection;

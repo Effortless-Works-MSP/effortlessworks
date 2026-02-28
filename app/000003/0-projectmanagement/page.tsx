@@ -5,7 +5,7 @@ import Footer from "../../000000/0-2-footer/footer";
 import SheetsProjectManagement from "../bb-projectmanagement-sheets/bb-home-section";
 import NotionProjectManagement from "../bb-projectmanagement-notion/bb-home-section";
 
-export default function BackOfficeHome() {
+export default function ProjectManagementHome() {
 
   return (
     <div className="home-container">

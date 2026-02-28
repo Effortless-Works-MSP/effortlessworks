@@ -3,7 +3,7 @@ import './home-instructorled.css';
 import React from 'react';
 import Link from 'next/link'; 
 
-const BackOfficeSection: React.FC = () => {
+const InstructorLedSection: React.FC = () => {
   return (
     <div className="instructorled-section-container">
       <h1>Instructor Led Courses Section</h1>
@@ -19,4 +19,4 @@ const BackOfficeSection: React.FC = () => {
   );
 };
 
-export default BackOfficeSection;
+export default InstructorLedSection;

@@ -3,7 +3,7 @@ import './home-productcourses.css';
 import React from 'react';
 import Link from 'next/link'; 
 
-const BackOfficeSection: React.FC = () => {
+const ProductCoursesSection: React.FC = () => {
   return (
     <div className="productcourses-section-container">
       <h1>Product Courses Section</h1>
@@ -19,4 +19,4 @@ const BackOfficeSection: React.FC = () => {
   );
 };
 
-export default BackOfficeSection;
+export default ProductCoursesSection;

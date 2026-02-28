@@ -41,8 +41,13 @@ const Navigation = () => {
   return (
     <>
       <header className={`mainheader ${scrolled ? "shrink" : ""}`}>
-        {/* Blog logo */}
-        <a href="https://www.muslimsuccesspath.com/" className="logo-link">
+        {/* Muslim Success Path logo */}
+        <a
+          href="https://www.muslimsuccesspath.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="logo-link"
+        >
           <Image
             src="/Website-Logo/MuslimSuccessPath-White.svg"
             alt="Muslim Success Path Logo"
