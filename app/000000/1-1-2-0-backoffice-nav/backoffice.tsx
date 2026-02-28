@@ -55,24 +55,24 @@ const Navigation: React.FC = () => {
         ref={headerRef}
         className={`backoffice-mainheader ${scrolled ? "shrink" : ""}`}
       >
-        {/* Blog logo */}
-        <a href="https://www.elifcakmak.blog/" className="backoffice-logo-link">
+        {/* Effortless Works logo */}
+        <Link href="/" className="backoffice-logo-link">
           <Image
-            src="/elif-logo/effortlessworksdark.svg"
-            alt="Elif Çakmak Logo"
-            width={100}
-            height={100}
+            src="/Website-Logo/effortlessworksdark.svg"
+            alt="Effortless Works Logo"
+            width={180}
+            height={180}
             className="backoffice-logo"
           />
-        </a>
+        </Link>
 
-        {/* Main Home logo */}
-        <Link href="/" className="backoffice-logo-link">
+        {/* Business logo */}
+        <Link href="/000002/business" className="backoffice-logo-link">
           <Image
             src="/nav-titles/biz-nav.svg"
             alt="Effortless Works"
-            width={300}
-            height={300}
+            width={280}
+            height={280}
             className="backoffice-logo2"
           />
         </Link>
@@ -90,7 +90,7 @@ const Navigation: React.FC = () => {
                 Business 🏢
               </Link>
 
-              <Link href="/000003/backoffice" className="backoffice-mainnav-link">
+              <Link href="/000003/0-backoffice" className="backoffice-mainnav-link">
                 Back Office 📂
               </Link>
             </div>
@@ -116,7 +116,7 @@ const Navigation: React.FC = () => {
       </header>
 
       {/* Spacer to prevent content jump */}
-      <div style={{ height: '310px' }} />
+      <div style={{ height: '270px' }} />
     </>
   );
 };

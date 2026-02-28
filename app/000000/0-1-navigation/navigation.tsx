@@ -42,12 +42,12 @@ const Navigation = () => {
     <>
       <header className={`mainheader ${scrolled ? "shrink" : ""}`}>
         {/* Blog logo */}
-        <a href="https://www.elifcakmak.blog/" className="logo-link">
+        <a href="https://www.muslimsuccesspath.com/" className="logo-link">
           <Image
-            src="/elif-logo/elifcakmaklogo.svg"
-            alt="Elif Çakmak Logo"
-            width={100}
-            height={100}
+            src="/Website-Logo/MuslimSuccessPath-White.svg"
+            alt="Muslim Success Path Logo"
+            width={280}
+            height={280}
             className="logo"
           />
         </a>
@@ -55,10 +55,10 @@ const Navigation = () => {
         {/* Main logo that scrolls home */}
         <button onClick={() => scrollToSection("mainhome")} className="logo-link">
           <Image
-            src="/elif-logo/effortlessworks.svg"
+            src="/Website-Logo/effortlessworks.svg"
             alt="Effortless Works"
-            width={100}
-            height={100}
+            width={180}
+            height={180}
             className="logo2"
           />
         </button>

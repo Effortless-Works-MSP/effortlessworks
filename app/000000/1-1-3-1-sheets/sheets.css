@@ -1,138 +1,152 @@
-.header {
+/* =============================
+   Project Management Sheets Navigation CSS
+   Matches working nav style
+============================= */
+
+.projectmanagement-sheets-mainheader {
   background-color: #1c0e45; 
   display: flex;
   box-shadow: 0 2px 5px #4bfe5a;
-  padding: 20px 40px;
+  padding: 20px 40px; /* same as working nav */
   justify-content: space-between;
   align-items: center; 
   flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
-  
-  .nav {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .nav-link {
-    text-decoration: none;
-    color: #efe1ff;
-    font-weight: 500;
-    transition: color 0.3s;
-    position: relative;
-    font-size: 14px;
-  }
-  
-  .nav-link:hover {
-    color: #fef74b;
-    transform: scale(1.12);
-  }
-  
-  .nav-link.active::after {
-    content: '';
-    display: block;
-    width: 6px; /* Adjust size of the dot */
-    height: 6px; /* Adjust size of the dot */
-    background-color: #4bfe5a; /* Dot color */
-    border: 1px solid #939851; /* Border around the dot */
-    border-radius: 50%; /* Make it circular */
-    position: absolute;
-    right: -8px; /* Adjust spacing from the link */
-    top: 70%; /* Adjust this value to move the dot lower or higher */
-    transform: translateY(-50%);
-  }
-  
-  .Home-button {
-    padding: 3px 10px;
-    background-color: #f3ef98;
-    color: #504081;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .Home-button:hover {
-    background-color: #504081;
-    color: #4bfe5a;
-  }
-  
-  .newsletter-button {
-    padding: 3px 10px;
-    background-color: #504081;
-    color: #4bfe5a;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .newsletter-button:hover {
-    background-color: #f3ef98;
-    color: #504081;
-  }
-  
-  .newsletter-button.active {
-    background-color: #f3ef98; /* Change the background color when active */
-    color: #504081; /* Adjust text color if needed */
-    border: none; /* Optional: Remove border if needed */
-    border-radius: 5px; /* Optional: Add border radius */
-    padding: 3px 10px; /* Optional: Adjust padding */
-    cursor: pointer; /* Optional: Make it a pointer cursor */
-    transition: background-color 0.3s; /* Smooth transition for background color change */
-  }
-  .newsletter-button.active:hover {
-    background-color: #504081;
-    color: #4bfe5a;
-  }
-  
-  .newsletter-button.active::after {
-    display: none; /* No yellow dot for the newsletter button */
-  }
-  
-  .logo-link {
-    display: inline-block;
-    margin: 10px;
-    cursor: pointer;
-    transition: transform 0.3s, filter 0.3s;
-  }
-  
-  .logo-link:hover {
-    transform: scale(1.1); 
-    filter: brightness(1.2);
-  }
-  
-  .logo {
-    width: 150px;
-    height: auto;
-    margin-left: 45px;
-  }
 
-  .logo2 {
-    width: 180px;
-    height: auto;
-    margin-left: 150px;
-  }
+.projectmanagement-sheets-mainheader.shrink {
+  padding: 10px 40px; /* shrink effect */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
-  /* Adjustments for smaller screens */
+/* =============================
+   Logo Styles
+============================= */
+
+.projectmanagement-sheets-logo-link {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.projectmanagement-sheets-logo-link:hover {
+  transform: scale(1.1); 
+  filter: brightness(1.2);
+}
+
+.projectmanagement-sheets-logo {
+  height: auto;
+  margin-left: 45px;
+  transition: width 0.3s ease;
+}
+
+.projectmanagement-sheets-mainheader.shrink .projectmanagement-sheets-logo {
+  width: 130px; /* shrink smaller logo when scrolling */
+}
+
+.projectmanagement-sheets-logo2 {
+  height: auto;
+  margin-left: 150px;
+  transition: width 0.3s ease;
+}
+
+.projectmanagement-sheets-mainheader.shrink .projectmanagement-sheets-logo2 {
+  width: 200px; /* slightly smaller on scroll */
+}
+
+/* =============================
+   Navigation Links
+============================= */
+
+.projectmanagement-sheets-mainnav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.nav-right {
+  margin-left: auto; /* push right group to the right */
+}
+
+/* Left links */
+.projectmanagement-sheets-mainnav-link {
+  text-decoration: none;
+  color: #efe1ff;
+  font-weight: 500;
+  font-size: 14px;
+  position: relative;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.projectmanagement-sheets-mainnav-link:hover {
+  color: #fef74b;
+  transform: scale(1.12);
+}
+
+/* Right buttons */
+.projectmanagement-sheets-Home-button,
+.projectmanagement-sheets-newsletter-button {
+  padding: 3px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.projectmanagement-sheets-Home-button {
+  background-color: #f3ef98;
+  color: #504081;
+}
+
+.projectmanagement-sheets-Home-button:hover {
+  background-color: #504081;
+  color: #4bfe5a;
+}
+
+.projectmanagement-sheets-newsletter-button {
+  background-color: #504081;
+  color: #4bfe5a;
+}
+
+.projectmanagement-sheets-newsletter-button:hover {
+  background-color: #f3ef98;
+  color: #504081;
+}
+
+/* =============================
+   Responsive adjustments
+============================= */
+
 @media (max-width: 768px) {
-  .header {
+  .projectmanagement-sheets-mainheader {
     flex-direction: column;
     align-items: center;
   }
 
-  .nav {
+  .projectmanagement-sheets-mainnav {
     justify-content: center;
   }
 
-  .logo {
+  .projectmanagement-sheets-logo {
     width: 120px;
-    margin-left: 0px;
+    margin-left: 0;
   }
 
-  .logo2 {
-    width: 140px; 
+  .projectmanagement-sheets-logo2 {
+    width: 140px;
     margin-left: 15px;
   }
 }

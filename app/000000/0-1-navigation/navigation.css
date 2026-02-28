@@ -115,22 +115,21 @@
   }
   
   .logo {
-  width: 150px;
   height: auto;
   transition: width 0.3s ease;
   }
 
   .mainheader.shrink .logo {
-  width: 110px;
-  }
-  .logo2 {
   width: 180px;
+}
+
+  .logo2 {
   transition: width 0.3s ease;
   }
 
-  .mainheader.shrink .logo2 {
+ .mainheader.shrink .logo2 {
   width: 130px;
-  }
+}
 
   /* Adjustments for smaller screens */
 @media (max-width: 768px) {

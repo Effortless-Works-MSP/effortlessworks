@@ -1,30 +1,120 @@
 "use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { usePathname } from 'next/navigation';
-import './sheets.css';
+import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import "./sheets.css";
 
-const Navigation = () => {
-  const pathname = usePathname(); 
+const Navigation: React.FC = () => {
+  const [scrolled, setScrolled] = useState(false); // shrink state
+  const [showNav, setShowNav] = useState(true);    // mobile nav visibility
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const headerRef = useRef<HTMLElement | null>(null);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const isMobile = window.innerWidth <= 768;
+
+      setScrolled(currentScrollY > 50);
+
+      if (isMobile) {
+        if (currentScrollY > lastScrollY && currentScrollY > 50) {
+          setShowNav(false); // hide nav scrolling down
+        } else {
+          setShowNav(true);  // show nav scrolling up
+        }
+      } else {
+        setShowNav(true); // always show on desktop
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
+  // Smooth scroll to section, offset by header height
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (!element || !headerRef.current) return;
+
+    const headerHeight = headerRef.current.offsetHeight;
+    const elementTop = element.getBoundingClientRect().top + window.scrollY;
+
+    window.scrollTo({
+      top: elementTop - headerHeight - 10, // extra spacing
+      behavior: "smooth",
+    });
+  };
 
   return (
-    <header className="header">
-      <Link href="/"className="logo-link"onClick={(e) => {e.preventDefault();window.location.href = "/";}}>
-        <Image src="/elif-logo/effortlessworksdark.svg" alt="Elif Çakmak Logo" width={100} height={100} />
-      </Link>
-      <Link href="/000002/business" className="logo-link">
-        <Image src="/nav-titles/biz-nav.svg" alt="Elif Çakmak Logo" width={300} height={300}  />
-      </Link>
-      <nav className="nav">
-        <Link href="/" className={`Home-button ${pathname === '/' ? 'active' : ''}`}onClick={(e) => { e.preventDefault();window.location.href = "/";}}>Main Home</Link>
-        <Link href="/000002/business" className={`nav-link ${pathname === '/000002/business' ? 'active' : ''}`}>Business 🏢</Link>
-        <Link href="/000003/projectmanagement" className={`nav-link ${pathname === '/000003/projectmanagement' ? 'active' : ''}`}>Project Management 📋</Link>
-        <Link href="/000010/pm-sheets" className={`newsletter-button ${pathname === '/000010/pm-sheets' ? 'active' : ''}`}>Sheets</Link>
-        <Link href="/000010/pm-notion" className={`newsletter-button ${pathname === '/000010/pm-notion' ? 'active' : ''}`}>Notion</Link>
-      </nav>
-    </header>
+    <>
+      <header
+        ref={headerRef}
+        className={`projectmanagement-sheets-mainheader ${scrolled ? "shrink" : ""}`}
+      >
+        {/* Effortless Works logo */}
+        <Link href="/" className="projectmanagement-sheets-logo-link">
+          <Image
+            src="/Website-Logo/effortlessworksdark.svg"
+            alt="Effortless Works Logo"
+            width={180}
+            height={180}
+            className="projectmanagement-sheets-logo"
+          />
+        </Link>
+
+        {/* Business logo */}
+        <Link href="/000002/business" className="projectmanagement-sheets-logo-link">
+          <Image
+            src="/nav-titles/biz-nav.svg"
+            alt="Effortless Works"
+            width={280}
+            height={280}
+            className="projectmanagement-sheets-logo2"
+          />
+        </Link>
+
+        {/* Nav buttons visible only if showNav is true */}
+        {showNav && (
+          <nav className="projectmanagement-sheets-mainnav">
+            {/* LEFT GROUP */}
+            <div className="nav-left">
+              <Link href="/" className="projectmanagement-sheets-Home-button">
+                Main Home
+              </Link>
+
+              <Link href="/000002/business" className="projectmanagement-sheets-mainnav-link">
+                Business 🏢
+              </Link>
+
+              <Link href="/000003/0-projectmanagement" className="projectmanagement-mainnav-link">
+                Project Management 📋
+              </Link>
+
+              <Link href="/000010/pm-sheets" className="projectmanagement-sheets-mainnav-link">
+              PM Sheets 📄
+            </Link>
+            </div>
+
+            {/* RIGHT GROUP */}
+            <div className="nav-right">
+              <Link
+                href="/000010/pm-notion"
+                className="projectmanagement-sheets-newsletter-button"
+              >
+                Notion
+              </Link>
+            </div>
+          </nav>
+        )}
+      </header>
+
+      {/* Spacer to prevent content jump */}
+      <div style={{ height: '310px' }} />
+    </>
   );
 };
 

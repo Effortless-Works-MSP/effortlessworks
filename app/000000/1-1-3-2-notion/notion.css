@@ -1,9 +1,9 @@
 /* =============================
-   Project Management Navigation CSS
+   project Management Notion Navigation CSS
    Matches working nav style
 ============================= */
 
-.projectmanagement-mainheader {
+.projectmanagement-notion-mainheader {
   background-color: #1c0e45; 
   display: flex;
   box-shadow: 0 2px 5px #4bfe5a;
@@ -19,7 +19,7 @@
   transition: all 0.3s ease;
 }
 
-.projectmanagement-mainheader.shrink {
+.projectmanagement-notion-mainheader.shrink {
   padding: 10px 40px; /* shrink effect */
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
@@ -28,35 +28,35 @@
    Logo Styles
 ============================= */
 
-.projectmanagement-logo-link {
+.projectmanagement-notion-logo-link {
   display: inline-block;
   margin: 10px;
   cursor: pointer;
   transition: transform 0.3s, filter 0.3s;
 }
 
-.projectmanagement-logo-link:hover {
+.projectmanagement-notion-logo-link:hover {
   transform: scale(1.1); 
   filter: brightness(1.2);
 }
 
-.projectmanagement-logo {
+.projectmanagement-notion-logo {
   height: auto;
   margin-left: 45px;
   transition: width 0.3s ease;
 }
 
-.projectmanagement-mainheader.shrink .projectmanagement-logo {
+.projectmanagement-notion-mainheader.shrink .projectmanagement-notion-logo {
   width: 130px; /* shrink smaller logo when scrolling */
 }
 
-.projectmanagement-logo2 {
+.projectmanagement-notion-logo2 {
   height: auto;
   margin-left: 150px;
   transition: width 0.3s ease;
 }
 
-.projectmanagement-mainheader.shrink .projectmanagement-logo2 {
+.projectmanagement-notion-mainheader.shrink .projectmanagement-notion-logo2 {
   width: 200px; /* slightly smaller on scroll */
 }
 
@@ -64,7 +64,7 @@
    Navigation Links
 ============================= */
 
-.projectmanagement-mainnav {
+.projectmanagement-notion-mainnav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -82,7 +82,7 @@
 }
 
 /* Left links */
-.projectmanagement-mainnav-link {
+.projectmanagement-notion-mainnav-link {
   text-decoration: none;
   color: #efe1ff;
   font-weight: 500;
@@ -91,14 +91,14 @@
   transition: color 0.3s, transform 0.3s;
 }
 
-.projectmanagement-mainnav-link:hover {
+.projectmanagement-notion-mainnav-link:hover {
   color: #fef74b;
   transform: scale(1.12);
 }
 
 /* Right buttons */
-.projectmanagement-Home-button,
-.projectmanagement-newsletter-button {
+.projectmanagement-notion-Home-button,
+.projectmanagement-notion-newsletter-button {
   padding: 3px 10px;
   border: none;
   border-radius: 5px;
@@ -106,22 +106,22 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-.projectmanagement-Home-button {
+.projectmanagement-notion-Home-button {
   background-color: #f3ef98;
   color: #504081;
 }
 
-.projectmanagement-Home-button:hover {
+.projectmanagement-notion-Home-button:hover {
   background-color: #504081;
   color: #4bfe5a;
 }
 
-.projectmanagement-newsletter-button {
+.projectmanagement-notion-newsletter-button {
   background-color: #504081;
   color: #4bfe5a;
 }
 
-.projectmanagement-newsletter-button:hover {
+.projectmanagement-notion-newsletter-button:hover {
   background-color: #f3ef98;
   color: #504081;
 }
@@ -131,21 +131,21 @@
 ============================= */
 
 @media (max-width: 768px) {
-  .projectmanagement-mainheader {
+  .projectmanagement-notion-mainheader {
     flex-direction: column;
     align-items: center;
   }
 
-  .projectmanagement-mainnav {
+  .projectmanagement-notion-mainnav {
     justify-content: center;
   }
 
-  .projectmanagement-logo {
+  .projectmanagement-notion-logo {
     width: 120px;
     margin-left: 0;
   }
 
-  .projectmanagement-logo2 {
+  .projectmanagement-notion-logo2 {
     width: 140px;
     margin-left: 15px;
   }

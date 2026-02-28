@@ -55,24 +55,24 @@ const Navigation: React.FC = () => {
         ref={headerRef}
         className={`business-mainheader ${scrolled ? "shrink" : ""}`}
       >
-        {/* Blog logo */}
-        <a href="https://www.elifcakmak.blog/" className="business-logo-link">
-          <Image
-            src="/elif-logo/elifcakmaklogo.svg"
-            alt="Elif Çakmak Logo"
-            width={100}
-            height={100}
-            className="business-logo"
-          />
-        </a>
-
-        {/* Main Home logo */}
+        {/* Effortless Works logo */}
         <Link href="/" className="business-logo-link">
           <Image
-            src="/elif-logo/effortlessworksdark.svg"
+            src="/Website-Logo/effortlessworksdark.svg"
+            alt="Effortless Works Logo"
+            width={180}
+            height={180}
+            className="business-logo"
+          />
+        </Link>
+
+        {/* Business logo */}
+        <Link href="/000002/business" className="business-logo-link">
+          <Image
+            src="/nav-titles/biz-nav.svg"
             alt="Effortless Works"
-            width={100}
-            height={100}
+            width={280}
+            height={280}
             className="business-logo2"
           />
         </Link>
@@ -119,7 +119,7 @@ const Navigation: React.FC = () => {
       </header>
 
       {/* Spacer to prevent content jump */}
-      <div style={{ height: '320px' }} />
+      <div style={{ height: '340px' }} />
     </>
   );
 };

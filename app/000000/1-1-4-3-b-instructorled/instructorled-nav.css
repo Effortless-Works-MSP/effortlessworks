@@ -1,10 +1,7 @@
-#backoffice,
-#projectmanagement,
-#howtos {
-  scroll-margin-top: 80px;
-}
 
-.business-mainheader {
+
+
+.business-howto-mainheader {
   background-color: #1c0e45; 
   display: flex;
   box-shadow: 0 2px 5px #4bfe5a;
@@ -20,12 +17,12 @@
   transition: all 0.3s ease;
 }
 
-.business-mainheader.shrink {
+.business-howto-mainheader.shrink {
   padding: 10px 40px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.business-mainnav {
+.business-howto-mainnav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -47,7 +44,7 @@
 
 /* ===== NAV LINKS ===== */
 
-.business-mainnav-link {
+.business-howto-mainnav-link {
   text-decoration: none;
   color: #efe1ff;
   font-weight: 500;
@@ -57,13 +54,13 @@
 }
 
 /* Hover */
-.business-mainnav-link:hover {
+.business-howto-mainnav-link:hover {
   color: #fef74b;
   transform: scale(1.12);
 }
 
 /* ✅ ACTIVE = YELLOW TEXT */
-.business-mainnav-link.active {
+.business-howto-mainnav-link.active {
   color: #fef74b;
   font-weight: 700;
 }
@@ -71,7 +68,7 @@
 
 /* ===== HOME BUTTON ===== */
 
-.business-Home-button {
+.business-howto-Home-button {
   padding: 3px 10px;
   background-color: #f3ef98;
   color: #504081;
@@ -81,13 +78,13 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.business-Home-button:hover {
+.business-howto-Home-button:hover {
   background-color: #504081;
   color: #4bfe5a;
 }
 
 /* ✅ ACTIVE HOME */
-.business-Home-button.active {
+.business-howto-Home-button.active {
   background-color: #504081;
   color: #fef74b;
   font-weight: 700;
@@ -96,7 +93,7 @@
 
 /* ===== SECTION BUTTONS ===== */
 
-.business-newsletter-button {
+.business-howto-newsletter-button {
   padding: 3px 10px;
   background-color: #504081;
   color: #4bfe5a;
@@ -106,13 +103,13 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.business-newsletter-button:hover {
+.business-howto-newsletter-button:hover {
   background-color: #f3ef98;
   color: #504081;
 }
 
 /* ✅ ACTIVE SECTION BUTTON */
-.business-newsletter-button.active {
+.business-howto-newsletter-button.active {
   background-color: #504081;
   color: #fef74b;
   font-weight: 700;
@@ -121,35 +118,35 @@
 
 /* ===== LOGOS ===== */
 
-.business-logo-link {
+.business-howto-logo-link {
   display: inline-block;
   margin: 10px;
   cursor: pointer;
   transition: transform 0.3s, filter 0.3s;
 }
 
-.business-logo-link:hover {
+.business-howto-logo-link:hover {
   transform: scale(1.1); 
   filter: brightness(1.2);
 }
 
-.business-logo {
+.business-howto-logo {
   height: auto;
   margin-left: 45px;
   transition: width 0.3s ease;
 }
 
-.business-mainheader.shrink .business-logo {
+.business-howto-mainheader.shrink .business-howto-logo {
   width: 130px;
 }
 
-.business-logo2 {
+.business-howto-logo2 {
   height: auto;
   margin-left: 150px;
   transition: width 0.3s ease;
 }
 
-.business-mainheader.shrink .business-logo2 {
+.business-howto-mainheader.shrink .business-howto-logo2 {
   width: 200px;
 }
 
@@ -157,21 +154,21 @@
 /* ===== MOBILE ===== */
 
 @media (max-width: 768px) {
-  .business-mainheader {
+  .business-howto-mainheader {
     flex-direction: column;
     align-items: center;
   }
 
-  .business-mainnav {
+  .business-howto-mainnav {
     justify-content: center;
   }
 
-  .business-logo {
+  .business-howto-logo {
     width: 120px;
     margin-left: 0px;
   }
 
-  .business-logo2 {
+  .business-howto-logo2 {
     width: 140px; 
     margin-left: 15px;
   }

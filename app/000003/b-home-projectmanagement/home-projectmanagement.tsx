@@ -10,7 +10,7 @@ const ProjectManagementSection: React.FC = () => {
       <p>This is placeholder content for the Project Management section.</p>
 
       {/* Button linking to another page */}
-      <Link href="/000003/projectmanagement"> {/* Replace '/target-page' with your page path */}
+      <Link href="/000003/0-projectmanagement"> {/* Replace '/target-page' with your page path */}
         <button className="link-button">
           Goes to Project Management Page
         </button>

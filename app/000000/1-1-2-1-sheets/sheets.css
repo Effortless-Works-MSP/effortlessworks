@@ -41,25 +41,23 @@
 }
 
 .backoffice-sheets-logo {
-  width: 200px;
   height: auto;
   margin-left: 45px;
   transition: width 0.3s ease;
 }
 
 .backoffice-sheets-mainheader.shrink .backoffice-sheets-logo {
-  width: 110px; /* shrink smaller logo when scrolling */
+  width: 130px; /* shrink smaller logo when scrolling */
 }
 
 .backoffice-sheets-logo2 {
-  width: 250px; /* match working nav logo size */
   height: auto;
   margin-left: 150px;
   transition: width 0.3s ease;
 }
 
 .backoffice-sheets-mainheader.shrink .backoffice-sheets-logo2 {
-  width: 150px; /* slightly smaller on scroll */
+  width: 200px; /* slightly smaller on scroll */
 }
 
 /* =============================

@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import "./notion.css";
+import "./instructorled-nav.css";
 
 const Navigation: React.FC = () => {
   const [scrolled, setScrolled] = useState(false); // shrink state
@@ -53,59 +53,61 @@ const Navigation: React.FC = () => {
     <>
       <header
         ref={headerRef}
-        className={`projectmanagement-notion-mainheader ${scrolled ? "shrink" : ""}`}
+        className={`business-howto-mainheader ${scrolled ? "shrink" : ""}`}
       >
         {/* Effortless Works logo */}
-        <Link href="/" className="projectmanagement-notion-logo-link">
+        <Link href="/" className="business-howto-logo-link">
           <Image
             src="/Website-Logo/effortlessworksdark.svg"
             alt="Effortless Works Logo"
             width={180}
             height={180}
-            className="projectmanagement-notion-logo"
+            className="business-howto-logo"
           />
         </Link>
 
         {/* Business logo */}
-        <Link href="/000002/business" className="projectmanagement-notion-logo-link">
+        <Link href="/000002/business" className="business-howto-logo-link">
           <Image
             src="/nav-titles/biz-nav.svg"
             alt="Effortless Works"
             width={280}
             height={280}
-            className="projectmanagement-notion-logo2"
+            className="business-howto-logo2"
           />
         </Link>
 
         {/* Nav buttons visible only if showNav is true */}
         {showNav && (
-          <nav className="projectmanagement-notion-mainnav">
-            {/* LEFT GROUP */}
+          <nav className="business-howto-mainnav">
+            {/* Left group */}
             <div className="nav-left">
-              <Link href="/" className="projectmanagement-notion-Home-button">
+              <Link href="/" className="business-howto-Home-button">
                 Main Home
               </Link>
 
-              <Link href="/000002/business" className="projectmanagement-notion-mainnav-link">
+              <Link href="/000002/business" className="business-howto-mainnav-link">
                 Business 🏢
               </Link>
 
-              <Link href="/000003/0-projectmanagement" className="projectmanagement-mainnav-link">
-                Project Management 📋
+              <Link href="/000003/0-howtos" className="business-howto-mainnav-link">
+                How Tos 🎥
               </Link>
 
-              <Link href="/000010/pm-notion" className="projectmanagement-notion-mainnav-link">
-              PM Notion 📄
-            </Link>
+              <Link href="/000011/b-instructorled" className="business-howto-mainnav-link">
+                Instructor Led Courses 🎓
+              </Link>
             </div>
 
-            {/* RIGHT GROUP */}
+            {/* Right group */}
             <div className="nav-right">
-              <Link
-                href="/000010/pm-sheets"
-                className="projectmanagement-notion-newsletter-button"
-              >
-                Sheets
+
+              <Link href="/000011/b-productcourses" className="business-howto-newsletter-button">
+                Product Courses
+              </Link>
+
+              <Link href="/000011/b-selfpaced" className="business-howto-newsletter-button">
+                Self Paced Courses
               </Link>
             </div>
           </nav>
@@ -113,7 +115,7 @@ const Navigation: React.FC = () => {
       </header>
 
       {/* Spacer to prevent content jump */}
-      <div style={{ height: '310px' }} />
+      <div style={{ height: '340px' }} />
     </>
   );
 };

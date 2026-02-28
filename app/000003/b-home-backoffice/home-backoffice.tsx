@@ -10,7 +10,7 @@ const BackOfficeSection: React.FC = () => {
       <p>This is placeholder content for the Backoffice section.</p>
 
       {/* Button linking to another page */}
-      <Link href="/000003/backoffice"> {/* Replace '/target-page' with your page path */}
+      <Link href="/000003/0-backoffice"> {/* Replace '/target-page' with your page path */}
         <button className="link-button">
           Goes to Back Office Page
         </button>
