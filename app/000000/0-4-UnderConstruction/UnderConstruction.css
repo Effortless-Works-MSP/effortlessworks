@@ -1,5 +1,5 @@
-.under-floating-card {
-    width: 300px;
+.Construction-floating-card {
+    width: 350px;
     padding: 20px;
     border-radius: 10px;
     border: 5px solid #333;
@@ -8,71 +8,70 @@
     text-align: center;
     margin: 0 auto;
     position: relative;
-    top: 150px; /* Adjust as needed */
-    margin-bottom: 410px; /* Add this line for more space before the footer */
+    top: 150px;
+    margin-bottom: 200px; /* more space before the footer */
   }
   
-  .under-floating-card:hover {
+  .Construction-floating-card:hover {
     border-color: #fef74b; 
   }
 
-  .under-construction-container {
+  .Construction-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 20;
   }
   
-  .under-gear-container {
+  .Construction-gear-container {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
   }
   
-  .under-gear {
+  .Construction-gear {
     position: relative;
     width: 60px;
     height: 60px;
-    border: 5px solid #4bfe5a;
+    border: 5px solid #fef74b;
     border-radius: 50%;
     transform-origin: center;
     animation: spin 3s linear infinite;
     background-color: transparent;
   }
   
-  .under-gear::before, .under-gear::after {
+  .Construction-gear::before, .Construction-gear::after {
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
     width: 10px;
     height: 10px;
-    background-color: #fef74b;
+    background-color: #4bfe5a;
     border-radius: 50%;
     transform: translate(-50%, -50%);
   }
   
-  .under-gear::before {
+  .Construction-gear::before {
     top: 0;
     left: 50%;
     transform: translate(-50%, -100%) rotate(45deg);
   }
   
-  .under-gear::after {
+  .Construction-gear::after {
     top: 100%;
     left: 50%;
     transform: translate(-50%, 0) rotate(45deg);
   }
   
-  .under-gear1 {
+  .Construction-gear1 {
     animation-delay: 0s;
   }
-  .under-gear2 {
+  .Construction-gear2 {
     animation-delay: 0.5s;
     border: 5px solid #504081;
   }
-  .under-gear3 {
+  .Construction-gear3 {
     animation-delay: 1s;
     border: 5px solid #efe1ff;
   }
@@ -86,8 +85,8 @@
     }
   }
   
-  .under-message {
-    font-size: 1.2rem;
+  .Construction-message {
+    font-size: 1.0rem;
     color: #efe1ff;
     margin-top: 10px;
   }
