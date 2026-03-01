@@ -89,8 +89,8 @@ const Navigation: React.FC = () => {
             {/* Right group */}
             <div className="nav-right">
 
-              <Link href="/000011/b-productcourses" className="business-howto-newsletter-button">
-                Product Courses
+              <Link href="/000011/b-productvideos" className="business-howto-newsletter-button">
+                Product Videos
               </Link>
 
               <Link href="/000011/b-instructorled" className="business-howto-newsletter-button">

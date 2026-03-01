@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import "./p-howtos.css";
+import "./product-nav.css";
 
 const Navigation: React.FC = () => {
   const [scrolled, setScrolled] = useState(false); // shrink state
@@ -35,66 +35,66 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  
+
   return (
     <>
       <header
         ref={headerRef}
-        className={`perproj-mainheader ${scrolled ? "shrink" : ""}`}
+        className={`business-howto-mainheader ${scrolled ? "shrink" : ""}`}
       >
         {/* Effortless Works logo */}
-        <Link href="/" className="perproj-logo-link">
+        <Link href="/" className="business-howto-logo-link">
           <Image
             src="/Website-Logo/effortlessworksdark.svg"
             alt="Effortless Works Logo"
             width={180}
             height={180}
-            className="perproj-logo"
+            className="business-howto-logo"
           />
         </Link>
 
         {/* Business logo */}
-        <Link href="/000002/individual" className="perproj-logo2-link">
+        <Link href="/000002/business" className="business-howto-logo-link">
           <Image
-            src="/nav-titles/indv-nav.svg"
+            src="/nav-titles/biz-nav.svg"
             alt="Effortless Works"
             width={280}
             height={280}
-            className="perproj-logo2"
+            className="business-howto-logo2"
           />
         </Link>
 
         {/* Nav buttons visible only if showNav is true */}
         {showNav && (
-          <nav className="p-howtos-mainnav">
+          <nav className="business-howto-mainnav">
             {/* Left group */}
             <div className="nav-left">
-              <Link href="/" className="p-howtos-Home-button">
+              <Link href="/" className="business-howto-Home-button">
                 Main Home
               </Link>
 
-              <Link href="/000002/individual" className="p-howtos-mainnav-link">
-                Individuals 🏠
+              <Link href="/000002/business" className="business-howto-mainnav-link">
+                Business 🏢
               </Link>
 
-              <Link href="/000004/0-3-p-howtos" className="p-howtos-mainnav-link">
+              <Link href="/000003/0-howtos" className="business-howto-mainnav-link">
                 How Tos 🎥
+              </Link>
+
+              <Link href="/000011/b-productvideos" className="business-howto-mainnav-link">
+                Product Videos 🎬
               </Link>
             </div>
 
             {/* Right group */}
             <div className="nav-right">
 
-              <Link href="/000004/0-0-lifetracker" className="p-howtos-newsletter-button">
-                Life Tracker
+              <Link href="/000011/b-selfpaced" className="business-howto-newsletter-button">
+                Self Paced Courses
               </Link>
 
-              <Link href="/000004/0-1-personaltracker" className="p-howtos-newsletter-button">
-                Personal Trackers
-              </Link>
-
-              <Link href="/000004/0-2-personalprojects" className="p-howtos-newsletter-button">
-                Personal Projects
+              <Link href="/000011/b-instructorled" className="business-howto-newsletter-button">
+                Instructor Led Courses
               </Link>
             </div>
           </nav>

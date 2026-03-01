@@ -1,0 +1,172 @@
+.p-instructorled-mainheader {
+  background-color: #1c0e45; 
+  display: flex;
+  box-shadow: 0 2px 5px #4bfe5a;
+  padding: 60px 40px;
+  justify-content: space-between;
+  align-items: center; 
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.p-instructorled-mainheader.shrink {
+  padding: 10px 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.p-instructorled-mainnav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.nav-left {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-left: auto; /* pushes this group to the right */
+}
+
+/* ===== NAV LINKS ===== */
+
+.p-instructorled-mainnav-link {
+  text-decoration: none;
+  color: #efe1ff;
+  font-weight: 500;
+  font-size: 14px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover */
+.p-instructorled-mainnav-link:hover {
+  color: #fef74b;
+  transform: scale(1.12);
+}
+
+/* ✅ ACTIVE = YELLOW TEXT */
+.p-instructorled-mainnav-link.active {
+  color: #fef74b;
+  font-weight: 700;
+}
+
+
+/* ===== HOME BUTTON ===== */
+
+.p-instructorled-Home-button {
+  padding: 3px 10px;
+  background-color: #f3ef98;
+  color: #504081;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.p-instructorled-Home-button:hover {
+  background-color: #504081;
+  color: #4bfe5a;
+}
+
+/* ✅ ACTIVE HOME */
+.p-instructorled-Home-button.active {
+  background-color: #504081;
+  color: #fef74b;
+  font-weight: 700;
+}
+
+
+/* ===== SECTION BUTTONS ===== */
+
+.p-instructorled-newsletter-button {
+  padding: 3px 10px;
+  background-color: #504081;
+  color: #4bfe5a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.p-instructorled-newsletter-button:hover {
+  background-color: #f3ef98;
+  color: #504081;
+}
+
+/* ✅ ACTIVE SECTION BUTTON */
+.p-instructorled-newsletter-button.active {
+  background-color: #504081;
+  color: #fef74b;
+  font-weight: 700;
+}
+
+
+/* ===== LOGOS ===== */
+
+.p-instructorled-logo-link {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.p-instructorled-logo-link:hover {
+  transform: scale(1.1); 
+  filter: brightness(1.2);
+}
+
+.p-instructorled-logo {
+  height: auto;
+  margin-left: 45px;
+  transition: width 0.3s ease;
+}
+
+.p-instructorled-mainheader.shrink .p-instructorled-logo {
+  width: 130px;
+}
+
+.p-instructorled-logo2 {
+  height: auto;
+  margin-left: 150px;
+  transition: width 0.3s ease;
+}
+
+.p-instructorled-mainheader.shrink .p-instructorled-logo2 {
+  width: 200px;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+  .p-instructorled-mainheader {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .p-instructorled-mainnav {
+    justify-content: center;
+  }
+
+  .p-instructorled-logo {
+    width: 120px;
+    margin-left: 0px;
+  }
+
+  .p-instructorled-logo2 {
+    width: 140px; 
+    margin-left: 15px;
+  }
+}

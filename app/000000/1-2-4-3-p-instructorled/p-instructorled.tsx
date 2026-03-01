@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import "./instructorled-nav.css";
+import "./p-instructorled.css";
 
 const Navigation: React.FC = () => {
   const [scrolled, setScrolled] = useState(false); // shrink state
@@ -35,53 +35,53 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-
+  
   return (
     <>
       <header
         ref={headerRef}
-        className={`business-howto-mainheader ${scrolled ? "shrink" : ""}`}
+        className={`p-instructorled-mainheader ${scrolled ? "shrink" : ""}`}
       >
         {/* Effortless Works logo */}
-        <Link href="/" className="business-howto-logo-link">
+        <Link href="/" className="p-instructorled-logo-link">
           <Image
             src="/Website-Logo/effortlessworksdark.svg"
             alt="Effortless Works Logo"
             width={180}
             height={180}
-            className="business-howto-logo"
+            className="p-instructorled-logo"
           />
         </Link>
 
         {/* Business logo */}
-        <Link href="/000002/business" className="business-howto-logo-link">
+        <Link href="/000002/individual" className="p-instructorled-logo2-link">
           <Image
-            src="/nav-titles/biz-nav.svg"
+            src="/nav-titles/indv-nav.svg"
             alt="Effortless Works"
             width={280}
             height={280}
-            className="business-howto-logo2"
+            className="p-instructorled-logo2"
           />
         </Link>
 
         {/* Nav buttons visible only if showNav is true */}
         {showNav && (
-          <nav className="business-howto-mainnav">
+          <nav className="p-instructorled-mainnav">
             {/* Left group */}
             <div className="nav-left">
-              <Link href="/" className="business-howto-Home-button">
+              <Link href="/" className="p-instructorled-Home-button">
                 Main Home
               </Link>
 
-              <Link href="/000002/business" className="business-howto-mainnav-link">
-                Business 🏢
+              <Link href="/000002/individual" className="p-instructorled-mainnav-link">
+                Individuals 🏠
               </Link>
 
-              <Link href="/000003/0-howtos" className="business-howto-mainnav-link">
+              <Link href="/000004/0-3-p-howtos" className="p-instructorled-mainnav-link">
                 How Tos 🎥
               </Link>
 
-              <Link href="/000011/b-instructorled" className="business-howto-mainnav-link">
+              <Link href="/000015/p-instructorled" className="p-instructorled-mainnav-link">
                 Instructor Led Courses 🎓
               </Link>
             </div>
@@ -89,13 +89,14 @@ const Navigation: React.FC = () => {
             {/* Right group */}
             <div className="nav-right">
 
-              <Link href="/000011/b-productvideos" className="business-howto-newsletter-button">
+              <Link href="/000015/p-productvideos" className="p-instructorled-newsletter-button">
                 Product Videos
               </Link>
 
-              <Link href="/000011/b-selfpaced" className="business-howto-newsletter-button">
+              <Link href="/000015/p-selfpaced" className="p-instructorled-newsletter-button">
                 Self Paced Courses
               </Link>
+
             </div>
           </nav>
         )}

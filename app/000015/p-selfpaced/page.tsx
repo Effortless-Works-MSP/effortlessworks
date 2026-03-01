@@ -1,7 +1,7 @@
 "use client"; // Add this directive to make this a client component
 
 import CustomCursor from '../../000000/0-0-cursor/page';
-import Navigation from '../../000000/1-2-4-p-howtos-nav/p-howtos';
+import Navigation from '../../000000/1-2-4-2-p-selfpaced/p-selfpaced';
 import Footer from '../../000000/0-2-footer/footer'
 import UnderConstruction from '../../000000/0-4-UnderConstruction/UnderConstruction'; // Import the new component
 

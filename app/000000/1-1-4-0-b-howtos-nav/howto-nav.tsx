@@ -98,10 +98,10 @@ const Navigation: React.FC = () => {
             {/* Right group */}
             <div className="nav-right">
               <button
-                onClick={() => scrollToSection("productcourses")}
+                onClick={() => scrollToSection("productvideos")}
                 className="business-howto-newsletter-button"
               >
-                Product Courses
+                Product Videos
               </button>
 
               <button

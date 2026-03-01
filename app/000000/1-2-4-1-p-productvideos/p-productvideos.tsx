@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import "./pers-nav.css";
+import "./p-productvideos.css";
 
 const Navigation: React.FC = () => {
   const [scrolled, setScrolled] = useState(false); // shrink state
@@ -36,66 +36,65 @@ const Navigation: React.FC = () => {
   }, [lastScrollY]);
 
   
-
   return (
     <>
       <header
         ref={headerRef}
-        className={`pers-mainheader ${scrolled ? "shrink" : ""}`}
+        className={`p-productvideos-mainheader ${scrolled ? "shrink" : ""}`}
       >
         {/* Effortless Works logo */}
-        <Link href="/" className="pers-logo-link">
+        <Link href="/" className="p-productvideos-logo-link">
           <Image
             src="/Website-Logo/effortlessworksdark.svg"
             alt="Effortless Works Logo"
             width={180}
             height={180}
-            className="pers-logo"
+            className="p-productvideos-logo"
           />
         </Link>
 
         {/* Business logo */}
-        <Link href="/000002/individual" className="pers-logo2-link">
+        <Link href="/000002/individual" className="p-productvideos-logo2-link">
           <Image
             src="/nav-titles/indv-nav.svg"
             alt="Effortless Works"
             width={280}
             height={280}
-            className="pers-logo2"
+            className="p-productvideos-logo2"
           />
         </Link>
 
         {/* Nav buttons visible only if showNav is true */}
         {showNav && (
-          <nav className="pers-mainnav">
+          <nav className="p-productvideos-mainnav">
             {/* Left group */}
             <div className="nav-left">
-              <Link href="/" className="pers-Home-button">
+              <Link href="/" className="p-productvideos-Home-button">
                 Main Home
               </Link>
 
-              <Link href="/000002/individual" className="pers-mainnav-link">
+              <Link href="/000002/individual" className="p-productvideos-mainnav-link">
                 Individuals 🏠
               </Link>
 
-              <Link href="/000004/0-1-personaltracker" className="pers-mainnav-link">
-                Personal Trackers 👤
+              <Link href="/000004/0-3-p-howtos" className="p-productvideos-mainnav-link">
+                How Tos 🎥
+              </Link>
+
+              <Link href="/000015/p-productvideos" className="p-productvideos-mainnav-link">
+                Product Videos 🎬
               </Link>
             </div>
 
             {/* Right group */}
             <div className="nav-right">
 
-              <Link href="/000004/0-0-lifetracker" className="pers-newsletter-button">
-                Life Tracker
+              <Link href="/000015/p-selfpaced" className="p-productvideos-newsletter-button">
+                Self Paced Courses
               </Link>
 
-              <Link href="/000004/0-2-personalprojects" className="pers-newsletter-button">
-                Personal Projects
-              </Link>
-
-              <Link href="/000004/0-3-p-howtos" className="pers-newsletter-button">
-                How Tos
+              <Link href="/000015/p-instructorled" className="p-productvideos-newsletter-button">
+                Instructor Led Courses
               </Link>
             </div>
           </nav>

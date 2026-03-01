@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import "./perproj-nav.css";
+import "./life-nav.css";
 
 const Navigation: React.FC = () => {
   const [scrolled, setScrolled] = useState(false); // shrink state
@@ -36,66 +36,61 @@ const Navigation: React.FC = () => {
   }, [lastScrollY]);
 
   
-
   return (
     <>
       <header
         ref={headerRef}
-        className={`perproj-mainheader ${scrolled ? "shrink" : ""}`}
+        className={`life-mainheader ${scrolled ? "shrink" : ""}`}
       >
         {/* Effortless Works logo */}
-        <Link href="/" className="perproj-logo-link">
+        <Link href="/" className="life-logo-link">
           <Image
             src="/Website-Logo/effortlessworksdark.svg"
             alt="Effortless Works Logo"
             width={180}
             height={180}
-            className="perproj-logo"
+            className="life-logo"
           />
         </Link>
 
         {/* Business logo */}
-        <Link href="/000002/individual" className="perproj-logo2-link">
+        <Link href="/000002/individual" className="life-logo2-link">
           <Image
             src="/nav-titles/indv-nav.svg"
             alt="Effortless Works"
             width={280}
             height={280}
-            className="perproj-logo2"
+            className="life-logo2"
           />
         </Link>
 
         {/* Nav buttons visible only if showNav is true */}
         {showNav && (
-          <nav className="perproj-mainnav">
+          <nav className="life-mainnav">
             {/* Left group */}
             <div className="nav-left">
-              <Link href="/" className="perproj-Home-button">
+              <Link href="/" className="life-Home-button">
                 Main Home
               </Link>
 
-              <Link href="/000002/individual" className="perproj-mainnav-link">
+              <Link href="/000002/individual" className="life-mainnav-link">
                 Individuals 🏠
               </Link>
 
-              <Link href="/000004/0-2-personalprojects" className="perproj-mainnav-link">
-                Personal Projects 📝
+              <Link href="/000004/0-0-lifetracker" className="life-mainnav-link">
+                Life Tracker 🌐
               </Link>
             </div>
 
             {/* Right group */}
             <div className="nav-right">
 
-              <Link href="/000004/0-0-lifetracker" className="perproj-newsletter-button">
-                Life Tracker
+              <Link href="/000012/lt-sheets" className="life-newsletter-button">
+                Sheets 
               </Link>
 
-              <Link href="/000004/0-1-personaltracker" className="perproj-newsletter-button">
-                Personal Trackers
-              </Link>
-
-              <Link href="/000004/0-3-p-howtos" className="perproj-newsletter-button">
-                How Tos
+              <Link href="/000012/lt-notion" className="life-newsletter-button">
+                Notion
               </Link>
             </div>
           </nav>
