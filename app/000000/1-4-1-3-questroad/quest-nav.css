@@ -1,0 +1,186 @@
+.quest-mainheader {
+  background-color: #1c0e45; 
+  display: flex;
+  box-shadow: 0 2px 5px #4bfe5a;
+  padding: 60px 40px;
+  justify-content: space-between;
+  align-items: center; 
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.quest-mainheader.shrink {
+  padding: 10px 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.quest-mainnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* KEY */
+  width: 100%;
+  flex-wrap: wrap;   /* allow wrapping */
+  gap: 16px;
+}
+
+.nav-left {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  
+}
+
+.nav-right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-left: auto;
+  flex-wrap: wrap;          /* allow buttons to wrap */
+  justify-content: flex-end; /* keep them aligned right */
+  max-width: 60%;           /* optional: prevents overlap */
+}
+
+/* ===== NAV LINKS ===== */
+
+.quest-mainnav-link {
+  text-decoration: none;
+  color: #efe1ff;
+  font-weight: 500;
+  font-size: 14px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover */
+.quest-mainnav-link:hover {
+  color: #fef74b;
+  transform: scale(1.12);
+}
+
+/* ✅ ACTIVE = YELLOW TEXT */
+.quest-mainnav-link.active {
+  color: #fef74b;
+  font-weight: 700;
+}
+
+
+/* ===== HOME BUTTON ===== */
+
+.quest-Home-button {
+  padding: 3px 10px;
+  background-color: #f3ef98;
+  color: #504081;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.quest-Home-button:hover {
+  background-color: #504081;
+  color: #4bfe5a;
+}
+
+/* ✅ ACTIVE HOME */
+.quest-Home-button.active {
+  background-color: #504081;
+  color: #fef74b;
+  font-weight: 700;
+}
+
+
+/* ===== SECTION BUTTONS ===== */
+
+.quest-newsletter-button {
+  padding: 3px 10px;
+  background-color: #504081;
+  color: #4bfe5a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.quest-newsletter-button:hover {
+  background-color: #f3ef98;
+  color: #504081;
+}
+
+/* ✅ ACTIVE SECTION BUTTON */
+.quest-newsletter-button.active {
+  background-color: #504081;
+  color: #fef74b;
+  font-weight: 700;
+}
+
+
+/* ===== LOGOS ===== */
+
+.quest-logo-link {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.quest-logo-link:hover {
+  transform: scale(1.1); 
+  filter: brightness(1.2);
+}
+
+.quest-logo {
+  height: auto;
+  margin-left: 45px;
+  transition: width 0.3s ease;
+}
+
+.quest-mainheader.shrink .quest-logo {
+  width: 130px;
+}
+
+.quest-logo2 {
+  height: auto;
+  margin-left: 150px;
+  transition: width 0.3s ease;
+}
+
+.quest-mainheader.shrink .quest-logo2 {
+  width: 200px;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+  .quest-mainheader {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quest-mainnav {
+    gap: 12px;
+  }
+
+  .nav-left {
+    justify-content: center;
+  }
+
+  .nav-right {
+    justify-content: center;
+  }
+
+  .quest-logo {
+    width: 120px;
+    margin-left: 0px;
+  }
+
+  .quest-logo2 {
+    width: 140px; 
+    margin-left: 15px;
+  }
+}

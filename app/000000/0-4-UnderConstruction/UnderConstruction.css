@@ -1,4 +1,4 @@
-.floating-card {
+.under-floating-card {
     width: 300px;
     padding: 20px;
     border-radius: 10px;
@@ -12,11 +12,11 @@
     margin-bottom: 410px; /* Add this line for more space before the footer */
   }
   
-  .floating-card:hover {
+  .under-floating-card:hover {
     border-color: #fef74b; 
   }
 
-  .construction-container {
+  .under-construction-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,13 +24,13 @@
     z-index: 20;
   }
   
-  .gear-container {
+  .under-gear-container {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
   }
   
-  .gear {
+  .under-gear {
     position: relative;
     width: 60px;
     height: 60px;
@@ -41,7 +41,7 @@
     background-color: transparent;
   }
   
-  .gear::before, .gear::after {
+  .under-gear::before, .under-gear::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -53,26 +53,26 @@
     transform: translate(-50%, -50%);
   }
   
-  .gear::before {
+  .under-gear::before {
     top: 0;
     left: 50%;
     transform: translate(-50%, -100%) rotate(45deg);
   }
   
-  .gear::after {
+  .under-gear::after {
     top: 100%;
     left: 50%;
     transform: translate(-50%, 0) rotate(45deg);
   }
   
-  .gear1 {
+  .under-gear1 {
     animation-delay: 0s;
   }
-  .gear2 {
+  .under-gear2 {
     animation-delay: 0.5s;
     border: 5px solid #504081;
   }
-  .gear3 {
+  .under-gear3 {
     animation-delay: 1s;
     border: 5px solid #efe1ff;
   }
@@ -86,7 +86,7 @@
     }
   }
   
-  .message {
+  .under-message {
     font-size: 1.2rem;
     color: #efe1ff;
     margin-top: 10px;

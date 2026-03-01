@@ -8,7 +8,7 @@ const UnderConstruction: React.FC = () => {
 
   const foregroundGrassBlades = Array.from({ length: 200 }, (_, index) => (
     <div
-      className="grass"
+      className="quest-grass"
       key={`foreground-${index}`}
       style={{
         animationDuration: getRandomDuration(),
@@ -20,7 +20,7 @@ const UnderConstruction: React.FC = () => {
 
   const backgroundGrassBlades = Array.from({ length: 200 }, (_, index) => (
     <div
-      className="grass-background"
+      className="quest-grass-background"
       key={`background-${index}`}
       style={{
         animationDuration: getRandomDuration(),
@@ -36,9 +36,9 @@ const UnderConstruction: React.FC = () => {
       swords.forEach((sword) => {
         // Cast sword as HTMLElement to access offsetWidth
         const swordElement = sword as HTMLElement;
-        swordElement.classList.remove('sword'); // Remove class to reset animation
+        swordElement.classList.remove('quest-sword'); // Remove class to reset animation
         void swordElement.offsetWidth; // Trigger reflow
-        swordElement.classList.add('sword'); // Add the class back to restart the animation
+        swordElement.classList.add('quest-sword'); // Add the class back to restart the animation
       });
     };
 
@@ -49,22 +49,22 @@ const UnderConstruction: React.FC = () => {
   }, []);
 
   return (
-    <div className="floating-card">
+    <div className="quest-floating-card">
   
-      <div className="construction-container">
-        <div className="grass-background-container">
+      <div className="quest-construction-container">
+        <div className="quest-grass-background-container">
           {backgroundGrassBlades}
         </div>
-        <div className="grass-container">
+        <div className="quest-grass-container">
           {foregroundGrassBlades}
         </div>
-        <div className="swords-container">
-          <Image className="sword sword1" src="/swords/sword1.svg" alt="Sword 1" width={100} height={100} />
-          <Image className="sword sword2" src="/swords/sword2.svg" alt="Sword 2" width={100} height={100} />
-          <Image className="sword sword3" src="/swords/sword3.svg" alt="Sword 3" width={100} height={100} />
-          <Image className="sword sword4" src="/swords/sword4.svg" alt="Sword 4" width={100} height={100} />
+        <div className="quest-swords-container">
+          <Image className="quest-sword quest-sword1" src="/swords/sword1.svg" alt="Sword 1" width={100} height={100} />
+          <Image className="quest-sword quest-sword2" src="/swords/sword2.svg" alt="Sword 2" width={100} height={100} />
+          <Image className="quest-sword quest-sword3" src="/swords/sword3.svg" alt="Sword 3" width={100} height={100} />
+          <Image className="quest-sword quest-sword4" src="/swords/sword4.svg" alt="Sword 4" width={100} height={100} />
         </div>
-        <div className="grass-base"></div> {/* Dark green base at the bottom */}
+        <div className="quest-grass-base"></div> {/* Dark green base at the bottom */}
       </div>
     </div>
   );

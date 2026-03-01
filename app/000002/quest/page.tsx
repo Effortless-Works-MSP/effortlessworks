@@ -1,7 +1,7 @@
 "use client"; // Add this directive to make this a client component
 
 import CustomCursor from '../../000000/0-0-cursor/page';
-import Navigation from '../../000000/1-4-0-quest-nav/navigation';
+import Navigation from '../../000000/1-4-1-0-quest-nav/quest-nav';
 import Footer from '../../000000/0-2-footer/footer'
 import QuestConstruction from '../../000000/0-5-QuestConstruction/UnderConstruction'; // Import the new component
 import './quest.css';

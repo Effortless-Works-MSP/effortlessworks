@@ -8,7 +8,7 @@ const UnderConstruction: React.FC = () => {
 
   const foregroundGrassBlades = Array.from({ length: 200 }, (_, index) => (
     <div
-      className="grass"
+      className="not-grass"
       key={`foreground-${index}`}
       style={{
         animationDuration: getRandomDuration(),
@@ -20,7 +20,7 @@ const UnderConstruction: React.FC = () => {
 
   const backgroundGrassBlades = Array.from({ length: 200 }, (_, index) => (
     <div
-      className="grass-background"
+      className="not-grass-background"
       key={`background-${index}`}
       style={{
         animationDuration: getRandomDuration(),
@@ -31,14 +31,14 @@ const UnderConstruction: React.FC = () => {
   ));
 
   useEffect(() => {
-    const swords = document.querySelectorAll('.sword');
+    const swords = document.querySelectorAll('.not-sword');
     const resetAnimations = () => {
       swords.forEach((sword) => {
         // Cast sword as HTMLElement to access offsetWidth
         const swordElement = sword as HTMLElement;
-        swordElement.classList.remove('sword'); // Remove class to reset animation
+        swordElement.classList.remove('not-sword'); // Remove class to reset animation
         void swordElement.offsetWidth; // Trigger reflow
-        swordElement.classList.add('sword'); // Add the class back to restart the animation
+        swordElement.classList.add('not-sword'); // Add the class back to restart the animation
       });
     };
 
@@ -49,22 +49,22 @@ const UnderConstruction: React.FC = () => {
   }, []);
 
   return (
-    <div className="notfloating-card">
+    <div className="not-floating-card">
   
-      <div className="notconstruction-container">
-        <div className="grass-background-container">
+      <div className="not-construction-container">
+        <div className="not-grass-background-container">
           {backgroundGrassBlades}
         </div>
-        <div className="grass-container">
+        <div className="not-grass-container">
           {foregroundGrassBlades}
         </div>
-        <div className="swords-container">
-          <Image className="sword sword1" src="/swords/sword1.svg" alt="Sword 1" width={100} height={100} />
-          <Image className="sword sword2" src="/swords/sword2.svg" alt="Sword 2" width={100} height={100} />
-          <Image className="sword sword3" src="/swords/sword3.svg" alt="Sword 3" width={100} height={100} />
-          <Image className="sword sword4" src="/swords/sword4.svg" alt="Sword 4" width={100} height={100} />
+        <div className="not-swords-container">
+          <Image className="not-sword not-sword1" src="/swords/sword1.svg" alt="Sword 1" width={100} height={100} />
+          <Image className="not-sword not-sword2" src="/swords/sword2.svg" alt="Sword 2" width={100} height={100} />
+          <Image className="not-sword not-sword3" src="/swords/sword3.svg" alt="Sword 3" width={100} height={100} />
+          <Image className="not-sword not-sword4" src="/swords/sword4.svg" alt="Sword 4" width={100} height={100} />
         </div>
-        <div className="grass-base"></div> {/* Dark green base at the bottom */}
+        <div className="not-grass-base"></div> {/* Dark green base at the bottom */}
       </div>
     </div>
   );
