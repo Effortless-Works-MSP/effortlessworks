@@ -1,4 +1,4 @@
-.indv-mainheader {
+.pers-mainheader {
   background-color: #1c0e45; 
   display: flex;
   box-shadow: 0 2px 5px #4bfe5a;
@@ -14,12 +14,12 @@
   transition: all 0.3s ease;
 }
 
-.indv-mainheader.shrink {
+.pers-mainheader.shrink {
   padding: 10px 40px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.indv-mainnav {
+.pers-mainnav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -41,7 +41,7 @@
 
 /* ===== NAV LINKS ===== */
 
-.indv-mainnav-link {
+.pers-mainnav-link {
   text-decoration: none;
   color: #efe1ff;
   font-weight: 500;
@@ -51,13 +51,13 @@
 }
 
 /* Hover */
-.indv-mainnav-link:hover {
+.pers-mainnav-link:hover {
   color: #fef74b;
   transform: scale(1.12);
 }
 
 /* ✅ ACTIVE = YELLOW TEXT */
-.indv-mainnav-link.active {
+.pers-mainnav-link.active {
   color: #fef74b;
   font-weight: 700;
 }
@@ -65,7 +65,7 @@
 
 /* ===== HOME BUTTON ===== */
 
-.indv-Home-button {
+.pers-Home-button {
   padding: 3px 10px;
   background-color: #f3ef98;
   color: #504081;
@@ -75,13 +75,13 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.indv-Home-button:hover {
+.pers-Home-button:hover {
   background-color: #504081;
   color: #4bfe5a;
 }
 
 /* ✅ ACTIVE HOME */
-.indv-Home-button.active {
+.pers-Home-button.active {
   background-color: #504081;
   color: #fef74b;
   font-weight: 700;
@@ -90,7 +90,7 @@
 
 /* ===== SECTION BUTTONS ===== */
 
-.indv-newsletter-button {
+.pers-newsletter-button {
   padding: 3px 10px;
   background-color: #504081;
   color: #4bfe5a;
@@ -100,13 +100,13 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.indv-newsletter-button:hover {
+.pers-newsletter-button:hover {
   background-color: #f3ef98;
   color: #504081;
 }
 
 /* ✅ ACTIVE SECTION BUTTON */
-.indv-newsletter-button.active {
+.pers-newsletter-button.active {
   background-color: #504081;
   color: #fef74b;
   font-weight: 700;
@@ -115,35 +115,35 @@
 
 /* ===== LOGOS ===== */
 
-.indv-logo-link {
+.pers-logo-link {
   display: inline-block;
   margin: 10px;
   cursor: pointer;
   transition: transform 0.3s, filter 0.3s;
 }
 
-.indv-logo-link:hover {
+.pers-logo-link:hover {
   transform: scale(1.1); 
   filter: brightness(1.2);
 }
 
-.indv-logo {
+.pers-logo {
   height: auto;
   margin-left: 45px;
   transition: width 0.3s ease;
 }
 
-.indv-mainheader.shrink .indv-logo {
+.pers-mainheader.shrink .pers-logo {
   width: 130px;
 }
 
-.indv-logo2 {
+.pers-logo2 {
   height: auto;
   margin-left: 150px;
   transition: width 0.3s ease;
 }
 
-.indv-mainheader.shrink .indv-logo2 {
+.pers-mainheader.shrink .pers-logo2 {
   width: 200px;
 }
 
@@ -151,21 +151,21 @@
 /* ===== MOBILE ===== */
 
 @media (max-width: 768px) {
-  .indv-mainheader {
+  .pers-mainheader {
     flex-direction: column;
     align-items: center;
   }
 
-  .indv-mainnav {
+  .pers-mainnav {
     justify-content: center;
   }
 
-  .indv-logo {
+  .pers-logo {
     width: 120px;
     margin-left: 0px;
   }
 
-  .indv-logo2 {
+  .pers-logo2 {
     width: 140px; 
     margin-left: 15px;
   }
