@@ -115,7 +115,7 @@ const Footer: React.FC = () => {
                   
                   <div className="footer-card title-card p-6 shadow-md rounded-md text-center">
                     <h1 className="text-2xl font-bold">Muslim Success Path</h1>
-                    <a href="https://www.muslimsuccesspath.com/2/about" className="footer-link" target="_blank" rel="noopener noreferrer">About Me</a>
+                    <a href="https://www.muslimsuccesspath.com/2/about" className="footer-link" target="_blank" rel="noopener noreferrer">About Us</a>
                     <a href="https://www.muslimsuccesspath.com/2/videos" className="footer-link" target="_blank" rel="noopener noreferrer">Videos</a>
                     <a href="https://www.muslimsuccesspath.com/2/podcast" className="footer-link" target="_blank" rel="noopener noreferrer">Podcast</a>
                     <a href="https://www.muslimsuccesspath.com/2/apps" className="footer-link" target="_blank" rel="noopener noreferrer">Apps</a>
