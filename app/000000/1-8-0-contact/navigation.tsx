@@ -38,8 +38,8 @@ const Navigation = () => {
           />
         </a>
 
-        {/* Main logo that scrolls home */}
-        <button onClick={() => scrollToSection("mainhome")} className="logo-link">
+        {/* Main logo now goes to home page */}
+        <Link href="/" className="logo-link">
           <Image
             src="/Website-Logo/effortlessworks.svg"
             alt="Effortless Works"
@@ -47,7 +47,7 @@ const Navigation = () => {
             height={180}
             className="logo2"
           />
-        </button>
+        </Link>
 
         {/* Navigation buttons */}
         <nav className="mainnav">
