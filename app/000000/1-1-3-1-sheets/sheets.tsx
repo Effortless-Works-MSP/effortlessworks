@@ -76,7 +76,7 @@ const Navigation: React.FC = () => {
                 Business 🏢
               </Link>
 
-              <Link href="/000003/0-projectmanagement" className="projectmanagement-mainnav-link">
+              <Link href="/000003/0-projectmanagement" className="projectmanagement-sheets-mainnav-link">
                 Project Management 📋
               </Link>
 

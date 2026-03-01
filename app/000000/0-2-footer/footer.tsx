@@ -103,46 +103,43 @@ const Footer: React.FC = () => {
               </div>
             </div>
 
-            {/* Column 4 - Effortless Works Cards */}
+            {/* Column 4 - Muslim Success Path Cards */}
             <div className="footer-column-wrapper">
               <div className="footer-column-wrapper-card p-6 shadow-md rounded-md">
                 <div className="footer-column">
                   <img 
-                    src="/elif-logo/footerelif.svg" 
-                    alt="All 3 Logos" 
+                    src="/Website-Logo/MuslimSuccessPath-White.svg" 
+                    alt="Muslim Success Path Logo" 
                     className="w-[400px] h-auto mb-5 mx-auto"
                   />
                   
                   <div className="footer-card title-card p-6 shadow-md rounded-md text-center">
-                    <h1 className="text-2xl font-bold">Elif Çakmak</h1>
-                    <a href="https://www.elifcakmak.blog/2/about" className="footer-link">About Me</a>
-                    <a href="https://www.elifcakmak.blog/2/videos" className="footer-link">Videos</a>
-                    <a href="https://www.elifcakmak.blog/2/podcast" className="footer-link">Podcast</a>
-                    <a href="https://www.elifcakmak.blog/2/apps" className="footer-link">Apps</a>
-                    <a href="https://www.elifcakmak.blog/2/books" className="footer-link">Books</a>
-                    <a href="https://www.elifcakmak.blog/3" className="footer-link">Road Map</a>
-                    <a href="https://www.elifcakmak.blog/2/newsletter" className="footer-link">Newsletter</a>
+                    <h1 className="text-2xl font-bold">Muslim Success Path</h1>
+                    <a href="https://www.muslimsuccesspath.com/2/about" className="footer-link" target="_blank" rel="noopener noreferrer">About Me</a>
+                    <a href="https://www.muslimsuccesspath.com/2/videos" className="footer-link" target="_blank" rel="noopener noreferrer">Videos</a>
+                    <a href="https://www.muslimsuccesspath.com/2/podcast" className="footer-link" target="_blank" rel="noopener noreferrer">Podcast</a>
+                    <a href="https://www.muslimsuccesspath.com/2/apps" className="footer-link" target="_blank" rel="noopener noreferrer">Apps</a>
+                    <a href="https://www.muslimsuccesspath.com/2/books" className="footer-link" target="_blank" rel="noopener noreferrer">Books</a>
+                    <a href="https://www.muslimsuccesspath.com/3" className="footer-link" target="_blank" rel="noopener noreferrer">Road Map</a>
+                    <a href="https://www.muslimsuccesspath.com/2/newsletter" className="footer-link" target="_blank" rel="noopener noreferrer">Newsletter</a>
                   </div>
 
                   
                   <div className="footer-card title-card p-6 shadow-md rounded-md text-center">
-                    <h1 className="text-2xl font-bold mb-6">Easy Flow Media</h1>
-                    <a href="https://www.facebook.com/profile.php?id=61569395896969" target="_blank" rel="noopener noreferrer">
-                      <img src="/social-media-logos/facebook.svg" alt="Facebook" className="social-icon" />
-                    </a>
-                    <a href="https://www.instagram.com/easyflow.media" target="_blank" rel="noopener noreferrer">
+                    <h1 className="text-2xl font-bold mb-6">Socials</h1>
+                    <a href="https://www.instagram.com/muslim.success.path" target="_blank" rel="noopener noreferrer">
                       <img src="/social-media-logos/instagram.svg" alt="Instagram" className="social-icon" />
                     </a>
-                    <a href="https://www.tiktok.com/@easyflow.media" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.tiktok.com/@muslim.success.path" target="_blank" rel="noopener noreferrer">
                       <img src="/social-media-logos/tiktok.svg" alt="TikTok" className="social-icon" />
                     </a>
-                    <a href="https://www.youtube.com/@EasyFlow-Media" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.youtube.com/@MuslimSuccessPath" target="_blank" rel="noopener noreferrer">
                       <img src="/social-media-logos/youtube.svg" alt="YouTube" className="social-icon" />
                     </a>
-                    <a href="https://www.linkedin.com/in/elif-cakmak/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/company/muslim-success-path/about" target="_blank" rel="noopener noreferrer">
                       <img src="/social-media-logos/linkedin.svg" alt="LinkedIn" className="social-icon" />
                     </a>
-                    <a href="https://x.com/EasyFlow_Media" target="_blank" rel="noopener noreferrer">
+                    <a href="https://x.com/muslimsuccess_" target="_blank" rel="noopener noreferrer">
                       <img src="/social-media-logos/twitter.svg" alt="Twitter" className="social-icon" />
                     </a>
                   </div>
