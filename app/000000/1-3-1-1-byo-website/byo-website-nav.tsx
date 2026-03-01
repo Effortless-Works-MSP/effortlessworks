@@ -90,15 +90,15 @@ const Navigation: React.FC = () => {
               </Link>
 
               <Link href="/000008/onboarding" className="byo-newsletter-button">
-                Onboarding Course
+                Onboarding
               </Link>
 
               <Link href="/000008/sheets" className="byo-newsletter-button">
-                Sheets System
+                Sheets
               </Link>
 
               <Link href="/000008/notion" className="byo-newsletter-button">
-                Notion System
+                Notion
               </Link>
             </div>
           </nav>

@@ -111,21 +111,21 @@ const Navigation: React.FC = () => {
                 onClick={() => scrollToSection("onboardingcourse")}
                 className="byo-newsletter-button"
               >
-                Onboarding Course
+                Onboarding
               </button>
 
               <button
                 onClick={() => scrollToSection("sheetssystem")}
                 className="byo-newsletter-button"
               >
-                Sheets System
+                Sheets
               </button>
 
               <button
                 onClick={() => scrollToSection("notionsystem")}
                 className="byo-newsletter-button"
               >
-                Notion System
+                Notion
               </button>
             </div>
           </nav>
