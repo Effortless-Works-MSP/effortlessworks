@@ -1,0 +1,77 @@
+/* main.css */
+.byo-app-section-container {
+  font-family: 'Nunito', sans-serif;
+  width: 97%;       /* takes full width of screen */
+  margin-left: 25px; /* small left padding for better appearance */
+  max-width: none;   /* remove max width limit */       /* no centering margin */
+  background-color: #f0e5ff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 30px;           /* slightly smaller padding */
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 700px;       /* ensures container isn't too short */
+  max-height: 800px;       /* prevents container from being too tall */
+  overflow-y: auto;        /* allows scrolling if content is bigger than max-height */
+  margin-bottom: 30px;     /* space below the section */
+  margin-top: 30px;        /* space above the section */
+}
+
+.byo-app-section-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.byo-app-section-container h1 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.byo-app-section-container p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Button styling */
+.link-button {
+  padding: 12px 24px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.link-button:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .byo-app-section-container {
+    width: 97%;
+    margin-left: 10px;
+    min-height: 500px;
+    max-height: none;      /* let it grow naturally on small screens */
+  }
+
+  .byo-app-section-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .byo-app-section-container p {
+    font-size: 0.95rem;
+  }
+
+  .link-button {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 10px 0;
+  }
+}
