@@ -1,24 +1,28 @@
-"use client"; // Add this directive to make this a client component
+"use client";
 
 import CustomCursor from './000000/0-0-cursor/page';
-import Navigation from './000000/1-7-0-notfound/navigation';
-import Footer from './000000/0-2-footer/footer'
-import UnderConstruction from './000000/0-4-UnderConstruction/UnderConstruction'; // Import the new component
+import Navigation from './000000/1-8-0-contact/navigation';
+import Footer from './000000/0-2-footer/footer';
+import UnderConstruction from './000000/0-4-UnderConstruction/UnderConstruction';
 
 export default function Home() {
-
   return (
     <div className="home-container">
-      {/* Import Cursor */}
       <CustomCursor />
-
-      {/* Navigation */}
       <Navigation />
 
-      {/* UnderConstruction */}
-      <UnderConstruction />
+      <h1
+        style={{
+          textAlign: "center",
+          fontSize: "80px",
+          marginTop: "100px",
+          color: "black"
+        }}
+      >
+        404
+      </h1>
 
-      {/* Footer */}
+      <UnderConstruction />
       <Footer />
     </div>
   );

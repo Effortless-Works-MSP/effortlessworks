@@ -1,27 +1,36 @@
-.header {
-  background-color: #1c0e45; 
+.mainheader {
+  background-color: #504081; 
+  backdrop-filter: blur(10px);
   display: flex;
-  box-shadow: 0 2px 5px #4bfe5a;
+  box-shadow: 0 2px 5px #1c0e45;
   padding: 20px 40px;
   justify-content: space-between;
   align-items: center; 
   flex-wrap: wrap;
-}
-  
-  .nav {
-  display: flex;
-  align-items: center;
+
+  /* 👇 Added for sticky nav */
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
 
-.nav-right {
-  display: flex;
-  gap: 16px;
-  margin-left: auto; /* Pushes everything to the right */
-  align-items: center;
+/* 👇 Shrink state */
+.mainheader.shrink {
+  padding: 10px 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
   
-  .nav-link {
+  .mainnav {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .mainnav-link {
     text-decoration: none;
     color: #efe1ff;
     font-weight: 500;
@@ -30,12 +39,12 @@
     font-size: 14px;
   }
   
-  .nav-link:hover {
+  .mainnav-link:hover {
     color: #fef74b;
     transform: scale(1.12);
   }
   
-  .nav-link.active::after {
+  .mainnav-link.active::after {
     content: '';
     display: block;
     width: 6px; /* Adjust size of the dot */
@@ -48,10 +57,8 @@
     top: 70%; /* Adjust this value to move the dot lower or higher */
     transform: translateY(-50%);
   }
-  .logo-effortless {
-  transform: translateX(40px);
-}
-  .newsletter-button {
+
+  .Home-button {
     padding: 3px 10px;
     background-color: #f3ef98;
     color: #504081;
@@ -59,12 +66,36 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-left: 20px;
+  }
+  
+  .Home-button:hover {
+    background-color: #504081;
+    color: #4bfe5a;
+  }
+  
+  .newsletter-button {
+    padding: 3px 10px;
+    background-color: #1c0e45;
+    color: #4bfe5a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
   }
   
   .newsletter-button:hover {
-    background-color: #504081;
-    color: #4bfe5a;
+    background-color: #f3ef98;
+    color: #504081;
+  }
+
+  .newsletter-button.active {
+    background-color: #f3ef98; /* Change the background color when active */
+    color: #504081; /* Adjust text color if needed */
+    border: none; /* Optional: Remove border if needed */
+    border-radius: 5px; /* Optional: Add border radius */
+    padding: 3px 10px; /* Optional: Adjust padding */
+    cursor: pointer; /* Optional: Make it a pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition for background color change */
   }
   
   .newsletter-button.active::after {
@@ -84,16 +115,21 @@
   }
   
   .logo {
-    width: 150px;
-    height: auto;
-    margin-left: 45px;
+  height: auto;
+  transition: width 0.3s ease;
   }
 
+  .mainheader.shrink .logo {
+  width: 180px;
+}
+
   .logo2 {
-    width: 180px;
-    height: auto;
-    margin-left: 150px;
+  transition: width 0.3s ease;
   }
+
+ .mainheader.shrink .logo2 {
+  width: 130px;
+}
 
   /* Adjustments for smaller screens */
 @media (max-width: 768px) {
@@ -102,7 +138,7 @@
     align-items: center;
   }
 
-  .nav {
+  .mainnav {
     justify-content: center;
   }
 
