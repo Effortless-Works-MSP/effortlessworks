@@ -2,7 +2,7 @@
 import CustomCursor from "../../000000/0-0-cursor/page";
 import Navigation from "../../000000/1-1-4-0-b-howtos-nav/howto-nav";
 import Footer from "../../000000/0-2-footer/footer";
-import ProductVideos from "../bb-howto-productvideos/home-productvideos";
+import ProductVideos from "../../000003/bb-howto-productvideos/home-productvideos";
 import SelfPacedCourses from "../../000003/bb-howto-selfpacedcourses/home-selfpaced";
 import InstructorledCourses from "../../000003/bb-howto-instructorledcourses/home-instructorled";
 
