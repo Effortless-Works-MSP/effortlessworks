@@ -3,7 +3,8 @@
 import CustomCursor from '../../000000/0-0-cursor/page';
 import Navigation from '../../000000/1-2-1-0-lifetracker-nav/life-nav';
 import Footer from '../../000000/0-2-footer/footer'
-import UnderConstruction from '../../000000/0-4-UnderConstruction/UnderConstruction'; // Import the new component
+import SheetsLifeTracker from "../../000004/pp-lifetracker-sheets/pp-home-section";
+import NotionLifeTracker from "../../000004/pp-lifetracker-notion/pp-home-section";
 
 export default function LifeTrackerHome() {
 
@@ -15,8 +16,13 @@ export default function LifeTrackerHome() {
       {/* Navigation */}
       <Navigation />
 
-      {/* UnderConstruction */}
-      <UnderConstruction />
+      <div id="SheetsLifeTrackerSection">
+        <SheetsLifeTracker />
+      </div>
+
+      <div id="NotionLifeTrackerSection">
+        <NotionLifeTracker />
+      </div>
 
       {/* Footer */}
       <Footer />

@@ -35,6 +35,19 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+  // Smooth scroll to section, offset by header height
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (!element || !headerRef.current) return;
+
+    const headerHeight = headerRef.current.offsetHeight;
+    const elementTop = element.getBoundingClientRect().top + window.scrollY;
+
+    window.scrollTo({
+      top: elementTop - headerHeight - 10, // extra spacing
+      behavior: "smooth",
+    });
+  };
   
   return (
     <>
@@ -84,15 +97,21 @@ const Navigation: React.FC = () => {
 
             {/* Right group */}
             <div className="nav-right">
+              <button
+                onClick={() => scrollToSection("SheetsLifeTrackerSection")}
+                className="life-newsletter-button"
+              >
+                Sheets
+              </button>
 
-              <Link href="/000012/lt-sheets" className="life-newsletter-button">
-                Sheets 
-              </Link>
-
-              <Link href="/000012/lt-notion" className="life-newsletter-button">
+              <button
+                onClick={() => scrollToSection("NotionLifeTrackerSection")}
+                className="life-newsletter-button"
+              >
                 Notion
-              </Link>
+              </button>
             </div>
+            
           </nav>
         )}
       </header>

@@ -3,7 +3,8 @@
 import CustomCursor from '../../000000/0-0-cursor/page';
 import Navigation from '../../000000/1-2-2-0-personaltracker-nav/pers-nav';
 import Footer from '../../000000/0-2-footer/footer'
-import UnderConstruction from '../../000000/0-4-UnderConstruction/UnderConstruction'; // Import the new component
+import SheetsPersonalTracker from "../../000004/pp-personaltracker-sheets/pp-home-section";
+import NotionPersonalTracker from "../../000004/pp-personaltracker-notion/pp-home-section";
 
 export default function PersonalTrackerHome() {
 
@@ -15,8 +16,13 @@ export default function PersonalTrackerHome() {
       {/* Navigation */}
       <Navigation />
 
-      {/* UnderConstruction */}
-      <UnderConstruction />
+      <div id="SheetsPersonalTrackerSection">
+        <SheetsPersonalTracker />
+      </div>
+
+      <div id="NotionPersonalTrackerSection">
+        <NotionPersonalTracker />
+      </div>
 
       {/* Footer */}
       <Footer />
