@@ -151,11 +151,23 @@ const Footer: React.FC = () => {
 
           {/* Bottom of Footer */}
           <div className="footer-links mt-8">
-            <a href="/4/privacy" className="footer-link">Privacy Policy</a>
-            <a href="/4/terms" className="footer-link">Terms of Service</a>
-            <a href="/4/return" className="footer-link">Return Policy</a>
-            <a href="/4/cookies" className="footer-link">Cookie Policy</a>
-            <a href="/4/disclaimer" className="footer-link">Disclaimer</a>
+            {[
+              { label: "Privacy Policy", href: "https://www.muslimsuccesspath.com/4/privacy" },
+              { label: "Terms of Service", href: "https://www.muslimsuccesspath.com/4/terms" },
+              { label: "Return Policy", href: "https://www.muslimsuccesspath.com/4/return" },
+              { label: "Cookie Policy", href: "https://www.muslimsuccesspath.com/4/cookies" },
+              { label: "Disclaimer", href: "https://www.muslimsuccesspath.com/4/disclaimer" },
+            ].map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="footer-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
 
           <div className="text-center mt-4 footer-copyright">
