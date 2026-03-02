@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
                       <a href="/000005/howtoplay" className="footer-link">How To Play</a>
                       <a href="/000005/roadmap" className="footer-link">Road Map</a>
                     </div>
-                    <QuestFooter />
+                    <QuestFooter onClick={() => window.location.href = "https://www.effortlessworks.store/000002/quest"}/>
                   </div>
                 </div>
               </div>
@@ -159,7 +159,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="text-center mt-4 footer-copyright">
-            <p>&copy; 2024 Elif Çakmak, EasyFlow Media, Effortless Works, Effortless Quest. All rights reserved.</p>
+            <p>&copy; 2024 Muslim Success Path, Effortless Works, Effortless Quest. All rights reserved.</p>
           </div>
         </div>
       </div>
